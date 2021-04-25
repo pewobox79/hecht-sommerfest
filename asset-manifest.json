@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/pewobox79/hecht-sommerfest/static/css/main.7737370e.chunk.css",
+    "main.js": "/pewobox79/hecht-sommerfest/static/js/main.43b8732c.chunk.js",
+    "main.js.map": "/pewobox79/hecht-sommerfest/static/js/main.43b8732c.chunk.js.map",
+    "runtime-main.js": "/pewobox79/hecht-sommerfest/static/js/runtime-main.f16353de.js",
+    "runtime-main.js.map": "/pewobox79/hecht-sommerfest/static/js/runtime-main.f16353de.js.map",
+    "static/js/2.9c9d9e1b.chunk.js": "/pewobox79/hecht-sommerfest/static/js/2.9c9d9e1b.chunk.js",
+    "static/js/2.9c9d9e1b.chunk.js.map": "/pewobox79/hecht-sommerfest/static/js/2.9c9d9e1b.chunk.js.map",
+    "static/js/3.246ca839.chunk.js": "/pewobox79/hecht-sommerfest/static/js/3.246ca839.chunk.js",
+    "static/js/3.246ca839.chunk.js.map": "/pewobox79/hecht-sommerfest/static/js/3.246ca839.chunk.js.map",
+    "index.html": "/pewobox79/hecht-sommerfest/index.html",
+    "static/css/main.7737370e.chunk.css.map": "/pewobox79/hecht-sommerfest/static/css/main.7737370e.chunk.css.map",
+    "static/js/2.9c9d9e1b.chunk.js.LICENSE.txt": "/pewobox79/hecht-sommerfest/static/js/2.9c9d9e1b.chunk.js.LICENSE.txt",
+    "static/media/hecht-headoffice.8cba234e.jpg": "/pewobox79/hecht-sommerfest/static/media/hecht-headoffice.8cba234e.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f16353de.js",
+    "static/js/2.9c9d9e1b.chunk.js",
+    "static/css/main.7737370e.chunk.css",
+    "static/js/main.43b8732c.chunk.js"
+  ]
+}
