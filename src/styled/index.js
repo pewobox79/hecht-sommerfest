@@ -2,26 +2,49 @@ import Hecht from '../assets/hecht-headoffice.jpg'
 
 import styled from "styled-components";
 
+
+export const WelcomeStyle = styled.div`
+  text-align: justify;
+  min-height: 50vh;
+  font-size: 2rem;
+  padding: 20px;
+  flex-grow: 1;
+ 
+`
 export const Date = styled.div`
   font-size: 7rem;
-  float: left;
-  width: 50%;
   font-weight: bold;
-  display: flex;
-  justify-content: center;
   color: red;
+  background-color: yellow;
+  height: 100%;
+  
+  
+  
 `
+export const DateFieldStyle = styled.div`
+  flex-grow: 1;
+  width: 15%;
+  text-align: center;
+`
+export const TimeFieldStyle = styled.div`
+flex-grow: 1;
+  background-color: green;
+
+  `
+
 export const Time = styled.time`
   font-size: 5rem;
-  display: flex;
-  justify-content: center;
   color: red;
+  
+  min-height: 50vh;
+ 
 `
 
-export const IntroSection = styled.div`
-  width: 100%;
+export const IntroSectionStyle = styled.div`
+  display: flex;
+  flex-direction: row;
   min-height: 50vh;
-  margin: auto;
+  background-color: purple;
 `
 
 export const FooterArea = styled.footer`

@@ -1,25 +1,12 @@
 import React from "react";
-
-import styled from "styled-components";
-
-const Body = styled.div`width: 50%;
-  display: flex;
-  justify-content: center;
-  text-align: justify;
-  min-height: 50vh;
-  font-size: 2rem;
-  padding: 20px;
-  box-sizing: border-box;
-  float: left;
-`
+import {WelcomeStyle} from "../styled";
 
 function Welcome() {
     return (
-        <Body>Ein jahrzehntelanger Traum wird wahr – Die Firma HECHT eröffnet ihr Technisches Service
-            Center in Pörnbach. Wenn auch verspätet, möchten wir es nicht versäumen diesen Meilenstein mit Ihnen zu
-            feiern.
-            Beginnen Sie den Abend bei uns mit einem Eröffnungsfilm und lassen Sie sich danach kulinarisch Verwöhnen.
-            Nach 22:30 Uhr wechseln wir in die Party Lounge-Area mit Cocktails und guter Musik</Body>
+        <WelcomeStyle>Jetzt aber! Seit einem Jahr leben wir einen jahrzehntelangen<br/>Traum. Die Zeit ist reif unser
+            neues Technisches Service center<br/>zu feiern, und genauso den Sommer, das Leben und uns selbst!<br/>Genießen
+            Sie mit uns einen geselligen Abend und lassen Sie<br/>sich sowohl kulinarisch als auch mit Live Musik
+            verwöhnen.<br/>Nach 22:30 Uhr wechseln wir in die Party Lounge-Area mit<br/>Cocktails und DJ.</WelcomeStyle>
     )
 }
 
