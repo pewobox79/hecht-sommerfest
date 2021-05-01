@@ -1,8 +1,6 @@
 import React from "react";
 import {Time, TimeFieldStyle} from '../styled/index'
 
-import styled from "styled-components";
-
 
 
 

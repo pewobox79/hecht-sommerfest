@@ -1,5 +1,5 @@
 import './App.css';
-import Menu from './components/Menu'
+import MainHeader from './components/MainHeader'
 import Welcome from "./components/Welcome";
 import CounterField from './components/CounterField'
 import Footer from "./components/Footer";
@@ -12,7 +12,7 @@ function App() {
 
     return (
         <div>
-            <Menu/>
+            <MainHeader/>
             <IntroSection>
                 <Welcome/>
                 <CounterField/>

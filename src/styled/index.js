@@ -1,4 +1,4 @@
-import Hecht from '../assets/hecht-headoffice.jpg'
+import HechtFooter from '../assets/images/HECHT_Einladungskarte_Motiv_MA-Footer.jpg'
 
 import styled from "styled-components";
 
@@ -9,17 +9,14 @@ export const WelcomeStyle = styled.div`
   font-size: 2rem;
   padding: 20px;
   flex-grow: 1;
- 
+  
+
 `
 export const Date = styled.div`
   font-size: 7rem;
   font-weight: bold;
   color: red;
-  background-color: yellow;
-  height: 100%;
-  
-  
-  
+
 `
 export const DateFieldStyle = styled.div`
   flex-grow: 1;
@@ -27,32 +24,35 @@ export const DateFieldStyle = styled.div`
   text-align: center;
 `
 export const TimeFieldStyle = styled.div`
-flex-grow: 1;
-  background-color: green;
+  flex-grow: 1;
 
-  `
+`
 
 export const Time = styled.time`
   font-size: 5rem;
   color: red;
-  
-  min-height: 50vh;
- 
+
 `
 
 export const IntroSectionStyle = styled.div`
   display: flex;
   flex-direction: row;
+  align-items: stretch;
   min-height: 50vh;
-  background-color: purple;
 `
 
 export const FooterArea = styled.footer`
-    width: 100%;
-min-height: 20vh;
-background-image: url(${Hecht});
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 30vh;
+  background-image: url(${HechtFooter});
   background-size: cover;
-  
+
 `
 
+export const FooterLogo = styled.div`
+    padding-left: 50px;
+  
+`
 
