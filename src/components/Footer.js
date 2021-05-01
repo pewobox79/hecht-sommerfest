@@ -1,21 +1,15 @@
 import React from "react";
-import {FooterArea} from "../styled";
+import {FooterArea, FooterLogo} from "../styled";
+import HechtLogo from '../assets/images/HECHT_Logo_Redesign_weiß.png';
 
-import styled from "styled-components";
-
-const FooterBody = styled.div`width: 70%; margin: auto; background-color: darkgray; box-sizing: border-box;`
-
-const FooterText = styled.h5 `font-size: 2rem;`
-
-function Footer (){
-    return(
+function Footer() {
+    return (
         <FooterArea>
-            <FooterBody>
-                <FooterText>Wir freuen uns auf ihr kommen!</FooterText>
+            <FooterLogo>
+                <img style={{height: "100px"}} src={HechtLogo}/>
+            </FooterLogo>
 
-            </FooterBody>
         </FooterArea>
-
 
     )
 }
