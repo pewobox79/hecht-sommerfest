@@ -3,26 +3,36 @@ import hecht from '../assets/images/HECHT_Einladungskarte_Motiv_MA-Header.jpg';
 
 import styled from "styled-components";
 
-const Wrapper = styled.div`
-  min-height: 50vh;
-  display: flex;
-  flex-direction: row;
+const Wrapper = styled.section`
+  height: 50vh;
   background-image: url(${hecht});
   background-size: cover;
-  align-items: center;
+  width: 100%;
+
 `
+const MainHeaderStyle = styled.div`
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;`
 
 const Intro = styled.div`
   width: 50%;
   position: absolute;
- padding-left: 10%;
+  padding-left: 10%;
 
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+  
 `
 const Title = styled.h1`
   font-size: 3rem;
   color: white;
   text-transform: uppercase;
-  letter-spacing: 15px;
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
 `
 const Nav = styled.nav`
   height: 50px;
@@ -41,15 +51,17 @@ function MainHeader() {
 
     return (
         <Wrapper>
-            <Intro>
-                <Title>Einladung zum <br/>Sommerfest</Title>
-                <Nav>
-                    <ul>
-                        <a href="#details"><List>Details | </List></a>
-                        <a href="#Anmeldung"><List>| Anmeldung</List></a>
-                    </ul>
-                </Nav>
-            </Intro>
+            <MainHeaderStyle>
+                <Intro>
+                    <Title>Einladung zum <br/>Sommerfest</Title>
+                    <Nav>
+                        <ul>
+                            <a href="#details"><List>Details | </List></a>
+                            <a href="#Anmeldung"><List>| Anmeldung</List></a>
+                        </ul>
+                    </Nav>
+                </Intro>
+            </MainHeaderStyle>
         </Wrapper>
     )
 }

@@ -6,12 +6,13 @@ import Footer from "./components/Footer";
 import EventDetails from "./components/EventDetails";
 import Feedback from "./components/Feedback";
 import IntroSection from "./components/IntroSection";
+import ImgSection from "./components/ImgSection";
 
 function App() {
 
 
     return (
-        <div>
+        <>
             <MainHeader/>
             <IntroSection>
                 <Welcome/>
@@ -19,9 +20,10 @@ function App() {
             </IntroSection>
             <EventDetails/>
             <Feedback/>
+            <ImgSection/>
             <Footer/>
-        </div>
-    );
+        </>
+    )
 }
 
 export default App;
