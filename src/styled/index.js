@@ -16,13 +16,14 @@ export const IntroSectionStyle = styled.div`
 `
 
 export const WelcomeStyle = styled.div`
-  text-align: justify;
-  font-size: 2rem;
+  
+  font-size: 2.5rem;
   padding: 20px;
   overflow: visible;
   flex-grow: 1;
 @media(max-width: 768px){
   text-align: left;
+  font-size: 1.5rem;
 }
 
 `
@@ -81,10 +82,10 @@ export const ImageSection = styled.section`
   height: 100vh;
   display: flex;
   align-items: center;
+  flex-direction: row;
   justify-content: center;
   background-image: url(${HechtStars});
   background-size: auto;
-  z-index: 4;
   
   @media(max-width: 768px){
     display: none;
@@ -92,11 +93,13 @@ export const ImageSection = styled.section`
 `
 
 export const HeadQuarter = styled.div`
-  width: 80%;
+  width: 50%;
   height: 60%;
   background-image: url(${HechtHq});
   background-size: contain;
   background-repeat: no-repeat;
+  border: 4px solid green;
+  
 
 `
 

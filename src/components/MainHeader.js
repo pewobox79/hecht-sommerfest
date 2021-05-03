@@ -27,11 +27,12 @@ const Intro = styled.div`
   
 `
 const Title = styled.h1`
-  font-size: 3rem;
+  font-size: 6rem;
   color: white;
   text-transform: uppercase;
+  font-weight: bolder;
   @media (max-width: 768px) {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 `
 const Nav = styled.nav`
@@ -44,7 +45,12 @@ const List = styled.li`
   list-style-type: none;
   color: white;
   float: left;
-`
+  font-size: 3rem;
+  font-weight: bold;
+  
+  @media(max-width: 768px) {
+    font-size: 1.5rem;
+  }`
 
 function MainHeader() {
 
