@@ -1,6 +1,6 @@
 import React from "react";
 import hecht from '../assets/images/HECHT_Einladungskarte_Motiv_MA-Header.jpg';
-
+import {device} from "../styled/device";
 import styled from "styled-components";
 
 const Wrapper = styled.section`
@@ -21,17 +21,28 @@ const Intro = styled.div`
   position: absolute;
   padding-left: 10%;
 
-  @media (max-width: 768px) {
+  @media ${device.tablet} {
     width: 100%;
   }
-  
+
 `
 const Title = styled.h1`
-  font-size: 6rem;
-  color: white;
-  text-transform: uppercase;
-  font-weight: bolder;
-  @media (max-width: 768px) {
+
+  @media ${device.desktop} {
+    font-size: 6rem;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bolder;
+  }
+  @media ${device.laptopL} {
+    font-size: 4.5rem;
+    
+  }
+  @media ${device.tablet} {
+    font-size: 3rem;
+  }
+
+  @media ${device.laptop} {
     font-size: 3rem;
   }
 `
@@ -41,16 +52,24 @@ const Nav = styled.nav`
 `
 
 const List = styled.li`
-  text-transform: uppercase;
-  list-style-type: none;
-  color: white;
-  float: left;
-  font-size: 3rem;
-  font-weight: bold;
-  
-  @media(max-width: 768px) {
+  @media ${device.desktop} {
+    text-transform: uppercase;
+    list-style-type: none;
+    color: white;
+    float: left;
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  @media ${device.tablet} {
     font-size: 1.5rem;
-  }`
+  }
+  @media ${device.tablet} {
+    font-size: 1.5rem;
+  }
+  @media ${device.laptop} {
+    font-size: 1.5rem;
+  }
+`
 
 function MainHeader() {
 
