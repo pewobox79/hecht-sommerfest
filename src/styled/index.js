@@ -24,6 +24,7 @@ export const WelcomeStyle = styled.div`
   padding: 20px;
   overflow: visible;
   flex-grow: 1;
+  width: 80%;
   @media ${device.laptopL} {
     text-align: left;
     font-size: 2rem;
@@ -85,7 +86,7 @@ export const ImageSection = styled.section`
   height: 100vh;
   display: flex;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   background-image: url(${HechtStars});
   background-size: auto;
@@ -109,6 +110,19 @@ export const HeadQuarter = styled.div`
     height: 90%
   }
 `
+
+export const ImgTitle = styled.h3`
+@media ${device.desktop}{
+  color: red;
+  font-size: 4rem;
+  font-weight: bold;
+  padding-bottom: 30px;
+}
+@media ${device.laptopL}{
+  font-size: 3rem;
+}
+`
+/*End main hecht image section before footer*/
 
 export const EventInfoSection = styled.section`
   @media ${device.desktop}{
@@ -155,7 +169,7 @@ export const ContactBox = styled.div`
     box-sizing: border-box;
     width: 50%;
     height: 50%;
-    padding: 10px;
+    padding: 20px;
     justify-content: center;
     overflow: hidden;
   }`
@@ -176,7 +190,7 @@ export const ServiceBox = styled.div`
     box-sizing: border-box;
     width: 100%;
     height: 100%;
-    padding: 10px;
+    padding: 20px;
     justify-content: center;
     
   }`
@@ -186,7 +200,7 @@ export const DirectionBox = styled.div`
     width: 50%;
     height: 50%;
     box-sizing: border-box;
-    padding: 10px;
+    padding: 20px;
     
   }`
 export const CovidBox = styled.div`
@@ -244,8 +258,91 @@ export const CovidBody = styled.p`
    font-size: 2rem;
   }
 `
+/*Anmeldesection*/
 
-/*End main hecht image section before footer*/
+export const FeedbackSection = styled.section`
+  width: 100%; 
+  height: 100vh; 
+  display: flex; 
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; 
+  background-color: red`
+
+export const AnmeldungRight = styled.div`
+  @media ${device.desktop} {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    height: 50%;
+  }
+  @media ${device.laptopL}{
+    flex-direction: column;
+  }
+`
+
+export const OverNightTitle = styled.h4`
+@media ${device.desktop}{
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+}
+
+@media ${device.laptopL}{
+  font-size: 1.5rem;
+  
+}`
+export const AnmeldeTitel = styled.h3`
+@media ${device.desktop}{
+  color: white;
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+  @media ${device.laptopL}{
+    font-size: 3rem;
+  }
+`
+
+
+export const TimeStyle = styled.span`
+  @media ${device.desktop} {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: black;
+  }
+  @media ${device.laptopL}{
+    font-size: 2rem;
+  }
+  
+`
+
+export const OverNightBox = styled.div`
+@media ${device.desktop}{
+  display: flex;
+  flex-direction: column;
+  height: 70%;
+  
+}`
+
+
+export const FormLabel = styled.label`font-size: 2rem; font-weight: bold;`
+export const Input = styled.input`width: 350px;
+  height: 50px;
+  margin: auto;
+  height: 40px;
+  border-radius: 5px;
+  outline: none; `
+export const InputButton = styled.button`width: 80px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: darkgrey;
+color: white;
+font-weight: bold`
 
 /*start FOOTER section*/
 export const FooterArea = styled.footer`

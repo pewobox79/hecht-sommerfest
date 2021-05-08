@@ -15,12 +15,14 @@ a[aria-label]:hover:after {
     content: attr(aria-label);
     padding: 19px 8px;
     position: absolute;
-    left: 0;
-    top: 100%;
+    left: 50px;
+    top: 0px;
     white-space: nowrap;
     z-index: 2;
     background:red;
     font-size: 1.5rem;
     font-weight: bold;
     border-radius: 10px;
+    width: 270px;
+    text-align: center;
 }
