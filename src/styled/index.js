@@ -181,7 +181,6 @@ export const ServiceBox = styled.div`
     
   }`
 
-
 export const DirectionBox = styled.div`
   @media ${device.desktop} {
     width: 50%;
