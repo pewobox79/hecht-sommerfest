@@ -2,6 +2,7 @@ import React from "react";
 import hecht from '../assets/images/HECHT_Einladungskarte_Motiv_MA-Header.jpg';
 import {device} from "../styled/device";
 import styled from "styled-components";
+import {AnchorStyle, UlStyle} from "../styled";
 
 const Wrapper = styled.section`
   height: 50vh;
@@ -80,10 +81,10 @@ function MainHeader() {
                 <Intro>
                     <Title>Einladung zum <br/>Sommerfest</Title>
                     <Nav>
-                        <ul>
-                            <a href="#details"><List>Details | </List></a>
-                            <a href="#Anmeldung"><List>| Anmeldung</List></a>
-                        </ul>
+                        <UlStyle>
+                            <AnchorStyle href="#details"><List>Details | </List></AnchorStyle>
+                            <AnchorStyle href="#Anmeldung"><List>| Anmeldung</List></AnchorStyle>
+                        </UlStyle>
                     </Nav>
                 </Intro>
             </MainHeaderStyle>
