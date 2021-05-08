@@ -61,15 +61,13 @@ const List = styled.li`
     font-size: 3rem;
     font-weight: bold;
   }
-  @media ${device.tablet} {
-    font-size: 1.5rem;
+  @media ${device.laptopL} {
+    font-size: 2rem;
   }
   @media ${device.tablet} {
     font-size: 1.5rem;
   }
-  @media ${device.laptop} {
-    font-size: 1.5rem;
-  }
+  
 `
 
 function MainHeader() {
