@@ -5,12 +5,10 @@ import {
     ContactBox,
     DirectionBox,
     CovidBox,
-    ContactTitle,
-    DirectionTitle,
-    CovidTitle,
-    ContactBody,
-    DirectionBody,
-    CovidBody, OuterRight
+    DetailsTitle,
+    UlStyle,
+    AnchorStyle,
+    CovidBody, OuterRight, SpanStyle, ServiceBox, ListStyle, ShuttleTimeStyle
 } from "../styled";
 
 function EventDetailSection() {
@@ -19,19 +17,37 @@ function EventDetailSection() {
         <EventInfoSection>
             <OuterLeft>
                 <ContactBox>
-                    <ContactTitle>Kontakt</ContactTitle>
-                    <ContactBody>Yessica Wolf<br/><a href="tel:004984418956700">+49 8441 89 56 700</a><br/><a href="mailto:event@hecht.eu">Email Yessica</a></ContactBody>
+                    <DetailsTitle>Kontakt</DetailsTitle>
+                    <CovidBody><SpanStyle>Yessica Wolf</SpanStyle><br/>
+                        <AnchorStyle
+                        href="tel:004984418956700">Telefon</AnchorStyle><br/><AnchorStyle
+                        href="mailto:event@hecht.eu">Email</AnchorStyle></CovidBody>
                 </ContactBox>
                 <DirectionBox>
-                    <DirectionTitle>Anfahrt</DirectionTitle>
-                    <DirectionBody>HECHT Technologie<br/>Am Anger 13<br/>85309 Pörnbach</DirectionBody>
+                    <DetailsTitle>Anfahrt</DetailsTitle>
+                    <CovidBody><SpanStyle>HECHT Technologie</SpanStyle><br/><AnchorStyle href="https://goo.gl/maps/mFgtMfEFe1DtekK5A" title="HECHT Technologie Pörnbach Google Maps Navigation" target="_blank">Am Anger 13<br/>85309
+                        Pörnbach</AnchorStyle></CovidBody>
                 </DirectionBox>
                 <CovidBox>
-                    <CovidTitle>Covid19-Schellteststation</CovidTitle>
-                    <CovidBody>Wir nehmen Ihre und unsere Gesundheit ernst und lassen jedem Gast vor Betreten des Festgeländes einen professionellen Corona Tests durch das BRK durchführen</CovidBody>
+                    <DetailsTitle>Covid19-Schellteststation</DetailsTitle>
+                    <CovidBody>Wir nehmen Ihre und unsere Gesundheit ernst und lassen jedem Gast vor Betreten des
+                        Festgeländes einen professionellen Corona Tests durch das BRK durchführen</CovidBody>
                 </CovidBox>
             </OuterLeft>
-
+            <OuterRight>
+                <CovidBox>
+                    <DetailsTitle>Shuttleservice</DetailsTitle>
+                    <CovidBody><SpanStyle>Unser HECHT Shuttle-Stadtbus fährt folgende Stationen an:</SpanStyle>
+                        <UlStyle>
+                            <ListStyle><ShuttleTimeStyle>22:00 Uhr: </ShuttleTimeStyle>Hohenwart-Tegernbach-Waidhofen-Schrobenhausen</ListStyle>
+                            <ListStyle><ShuttleTimeStyle>22:30 Uhr: </ShuttleTimeStyle>Pfaffenhofen</ListStyle>
+                            <ListStyle><ShuttleTimeStyle>00:00 Uhr: </ShuttleTimeStyle>Hohenwart-Tegernbach-Waidhofen-Schrobenhausen</ListStyle>
+                            <ListStyle><ShuttleTimeStyle>00:30 Uhr: </ShuttleTimeStyle>Pfaffenhofen</ListStyle>
+                            <ListStyle><ShuttleTimeStyle>02:00 Uhr: </ShuttleTimeStyle>Hohenwart-Tegernbach-Waidhofen-Schrobenhausen</ListStyle>
+                            <ListStyle><ShuttleTimeStyle>02:30 Uhr: </ShuttleTimeStyle>Pfaffenhofen</ListStyle>
+                        </UlStyle></CovidBody>
+                </CovidBox>
+            </OuterRight>
         </EventInfoSection>
     )
 }

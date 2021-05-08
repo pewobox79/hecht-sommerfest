@@ -11,6 +11,7 @@ export const IntroSectionStyle = styled.div`
   display: flex;
   flex-direction: row;
   min-height: 50vh;
+  padding-bottom: 40px;
 
   @media ${device.tablet} {
     flex-direction: column;
@@ -19,13 +20,13 @@ export const IntroSectionStyle = styled.div`
 
 export const WelcomeStyle = styled.div`
 
-  font-size: 2.5rem;
+  font-size: 3rem;
   padding: 20px;
   overflow: visible;
   flex-grow: 1;
-  @media ${device.tablet} {
+  @media ${device.laptopL} {
     text-align: left;
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
 `
@@ -101,7 +102,6 @@ export const HeadQuarter = styled.div`
     background-image: url(${HechtHq});
     background-size: contain;
     background-repeat: no-repeat;
-    border: 4px solid green;
   }
 
   @media ${device.laptop} {
@@ -111,18 +111,32 @@ export const HeadQuarter = styled.div`
 `
 
 export const EventInfoSection = styled.section`
-  width: 100%;
-  height: 100vh;
+  @media ${device.desktop}{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  @media ${device.laptop}{
+    flex-direction: column;
+  }
+  
+  
 `
 
 export const OuterLeft = styled.div`
   @media ${device.desktop} {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
     width: 50%;
-    height: 100vh;
-    background-color: red;
-
+    height: 100%;
+    overflow: hidden;
+  }
+  @media ${device.laptopL}{
+    
   }
 `
 export const OuterRight = styled.div`
@@ -130,63 +144,105 @@ export const OuterRight = styled.div`
     display: flex;
     flex-direction: row;
     width: 50%;
-    height: 50vh;
-    background-color: red;
-
+    height: 100%;
+  }
+  @media ${device.laptopL}{
+    flex-direction: column;
   }
 `
 export const ContactBox = styled.div`
   @media ${device.desktop} {
+    box-sizing: border-box;
     width: 50%;
     height: 50%;
-    background-color: purple
+    padding: 10px;
+    justify-content: center;
+    overflow: hidden;
   }`
+
+export const AnchorStyle = styled.a`
+  @media ${device.desktop} {
+    color: grey;
+    font-size: 3rem;
+    text-decoration: none;
+  }
+  @media ${device.laptopL}{
+    font-size: 2rem
+  }
+`
+
+export const ServiceBox = styled.div`
+  @media ${device.desktop} {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    justify-content: center;
+    
+  }`
+
+
 export const DirectionBox = styled.div`
   @media ${device.desktop} {
     width: 50%;
     height: 50%;
-    background-color: yellow;
+    box-sizing: border-box;
+    padding: 10px;
+    
   }`
 export const CovidBox = styled.div`
   @media ${device.desktop} {
     display: block;
     width: 100%;
     height: 50%;
-    background-color: antiquewhite;
-  }`
-export const DirectionTitle = styled.h4`
-  @media ${device.desktop} {
-    font-size: 3rem;
-    color: red;
+    padding: 20px;
+    
   }`
 
-export const ContactTitle = styled.h4`
+export const SpanStyle = styled.span`
   @media ${device.desktop} {
+    font-weight: bold;
     font-size: 3rem;
-    color: red;
-  }`
-export const CovidTitle = styled.h4`
-  @media ${device.desktop} {
-    font-size: 3rem;
-    color: red;
-  }`
+    text-transform: uppercase;
+  }
+  @media ${device.laptopL}{
+    font-size: 2rem;
+  }
+  
+`
 
-export const ContactBody = styled.p`
+export const DetailsTitle = styled.h4`
   @media ${device.desktop} {
-    font-size: 1rem;
-    color: green;
+    font-size: 4rem;
+    color: red;
+    padding-bottom: 40px;
+    text-transform: uppercase;
   }
+
+@media ${device.laptopL}{
+  font-size: 3rem
+}
 `
-export const DirectionBody = styled.p`
-  @media ${device.desktop} {
-    font-size: 1rem;
-    color: green;
-  }
+
+export const UlStyle = styled.ul`
+padding: 20px 0px 0px 0px;
+  margin: 0px;
 `
+export const ListStyle = styled.li`
+list-style-type: none;
+  padding-bottom: 5px;
+`
+export const ShuttleTimeStyle = styled.span`
+font-weight: bold;
+  color: grey;
+  `
 export const CovidBody = styled.p`
   @media ${device.desktop} {
-    font-size: 1rem;
-    color: green;
+    font-size: 3rem;
+    color: grey;
+  }
+  @media ${device.laptopL}{
+   font-size: 2rem;
   }
 `
 
