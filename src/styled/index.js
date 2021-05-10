@@ -24,7 +24,7 @@ export const WelcomeStyle = styled.div`
   padding: 20px;
   overflow: visible;
   flex-grow: 1;
-  width: 80%;
+  width: 70%;
   @media ${device.laptopL} {
     text-align: left;
     font-size: 2rem;
@@ -114,7 +114,7 @@ export const HeadQuarter = styled.div`
 export const ImgTitle = styled.h3`
 @media ${device.desktop}{
   color: red;
-  font-size: 4rem;
+  font-size: 4em;
   font-weight: bold;
   padding-bottom: 30px;
 }
@@ -134,6 +134,8 @@ export const EventInfoSection = styled.section`
   
   @media ${device.laptop}{
     flex-direction: column;
+    height: 1500px;
+    
   }
   
   
@@ -147,10 +149,9 @@ export const OuterLeft = styled.div`
     align-items: center;
     width: 50%;
     height: 100%;
-    overflow: hidden;
   }
   @media ${device.laptopL}{
-    
+   
   }
 `
 export const OuterRight = styled.div`
@@ -172,7 +173,12 @@ export const ContactBox = styled.div`
     padding: 20px;
     justify-content: center;
     overflow: hidden;
-  }`
+  }
+
+@media ${device.laptopL}{
+  
+  font-size: 1.4rem
+}`
 
 export const AnchorStyle = styled.a`
   @media ${device.desktop} {
@@ -233,7 +239,7 @@ export const DetailsTitle = styled.h4`
   }
 
 @media ${device.laptopL}{
-  font-size: 3rem
+  font-size: 2rem
 }
 `
 
@@ -260,14 +266,21 @@ export const CovidBody = styled.p`
 `
 /*Anmeldesection*/
 
-export const FeedbackSection = styled.section`
-  width: 100%; 
-  height: 100vh; 
-  display: flex; 
+export const FeedbackSection = styled.section` @media ${device.desktop} {
+  width: 100%;
+  height: 100vh;
+  display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center; 
-  background-color: red`
+  align-items: center;
+  background-color: red
+}
+@media ${device.laptopL}{
+  flex-direction: column;
+  height: 1300px;
+}
+`
+
 
 export const AnmeldungRight = styled.div`
   @media ${device.desktop} {
@@ -328,21 +341,106 @@ export const OverNightBox = styled.div`
   
 }`
 
+export const OverNightBody = styled.p`
+  
+  @media ${device.desktop} {
+    font-size: 2.5rem;
+    color: black;
+  }
+  @media ${device.laptopL}{
+   font-size: 1.5rem;
+  }
 
-export const FormLabel = styled.label`font-size: 2rem; font-weight: bold;`
+`
+export const Anmeldeform = styled.form`
+@media ${device.desktop}{
+  padding: 40px;
+  width: 80%;
+  height: 80%;
+}
+  
+`
+export const AnmeldeLabel = styled.label`
+@media ${device.desktop}{
+  
+  color: black;
+  font-size: 2.5rem;
+  font-weight: bold;
+  display: block;
+}
+`
+export const AnmeldeCheckbox = styled.input`
+width: 50px;
+height: 50px;
+  display: block;
+`
+export const AnmeldeInput = styled.input`
+@media ${device.desktop} {
+  height: 40px;
+  width: 400px;
+  display: block;
+  margin: 10px 0px 5px 0px;
+  
+  &::placeholder{
+    color: grey;
+    text-transform: uppercase;
+    padding: 5px 0px 5px 20px;
+    font-size: 0.8rem
+  }
+}
+`
+
+export const AnmeldeBemerkung = styled.textarea`
+@media ${device.desktop}{
+  height: 150px;
+  width: 400px;
+  display: block;
+  font-family: BlinkMacSystemFont ;
+
+  &::placeholder{
+    color: grey;
+    text-transform: uppercase;
+    padding: 5px 0px 5px 20px;
+    font-size: 0.8rem
+  }
+}
+`
+
+
+export const AnmeldeButton = styled.button`
+@media ${device.desktop}{
+  outline: none;
+  border: none;
+  height: 63px;
+  width: 270px;
+  background-color: black;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  transition: 0.5s ease-out;
+  margin-top: 40px;
+
+  &:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+  }
+  
+  @media ${device.laptopL}{
+    height: 50px;
+    width: 230px;
+    font-size: 1.5rem;
+    
+  }
+}
+`
 export const Input = styled.input`width: 350px;
   height: 50px;
   margin: auto;
   height: 40px;
   border-radius: 5px;
   outline: none; `
-export const InputButton = styled.button`width: 80px;
-  height: 50px;
-  padding: 5px;
-  border-radius: 10px;
-  background-color: darkgrey;
-color: white;
-font-weight: bold`
+
 
 /*start FOOTER section*/
 export const FooterArea = styled.footer`
