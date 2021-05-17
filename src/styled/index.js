@@ -112,33 +112,33 @@ export const HeadQuarter = styled.div`
 `
 
 export const ImgTitle = styled.h3`
-@media ${device.desktop}{
-  color: red;
-  font-size: 4em;
-  font-weight: bold;
-  padding-bottom: 30px;
-}
-@media ${device.laptopL}{
-  font-size: 3rem;
-}
+  @media ${device.desktop} {
+    color: red;
+    font-size: 4em;
+    font-weight: bold;
+    padding-bottom: 30px;
+  }
+  @media ${device.laptopL} {
+    font-size: 3rem;
+  }
 `
 /*End main hecht image section before footer*/
 
 export const EventInfoSection = styled.section`
-  @media ${device.desktop}{
+  @media ${device.desktop} {
     display: flex;
     flex-direction: row;
     width: 100%;
     height: 100vh;
   }
-  
-  @media ${device.laptop}{
+
+  @media ${device.laptop} {
     flex-direction: column;
     height: 1500px;
-    
+
   }
-  
-  
+
+
 `
 
 export const OuterLeft = styled.div`
@@ -150,8 +150,8 @@ export const OuterLeft = styled.div`
     width: 50%;
     height: 100%;
   }
-  @media ${device.laptopL}{
-   
+  @media ${device.laptopL} {
+
   }
 `
 export const OuterRight = styled.div`
@@ -161,7 +161,7 @@ export const OuterRight = styled.div`
     width: 50%;
     height: 100%;
   }
-  @media ${device.laptopL}{
+  @media ${device.laptopL} {
     flex-direction: column;
   }
 `
@@ -175,10 +175,10 @@ export const ContactBox = styled.div`
     overflow: hidden;
   }
 
-@media ${device.laptopL}{
-  
-  font-size: 1.4rem
-}`
+  @media ${device.laptopL} {
+
+    font-size: 1.4rem
+  }`
 
 export const AnchorStyle = styled.a`
   @media ${device.desktop} {
@@ -186,7 +186,7 @@ export const AnchorStyle = styled.a`
     font-size: 3rem;
     text-decoration: none;
   }
-  @media ${device.laptopL}{
+  @media ${device.laptopL} {
     font-size: 2rem
   }
 `
@@ -198,7 +198,7 @@ export const ServiceBox = styled.div`
     height: 100%;
     padding: 20px;
     justify-content: center;
-    
+
   }`
 
 export const DirectionBox = styled.div`
@@ -207,7 +207,7 @@ export const DirectionBox = styled.div`
     height: 50%;
     box-sizing: border-box;
     padding: 20px;
-    
+
   }`
 export const CovidBox = styled.div`
   @media ${device.desktop} {
@@ -215,7 +215,7 @@ export const CovidBox = styled.div`
     width: 100%;
     height: 50%;
     padding: 20px;
-    
+
   }`
 
 export const SpanStyle = styled.span`
@@ -224,10 +224,10 @@ export const SpanStyle = styled.span`
     font-size: 3rem;
     text-transform: uppercase;
   }
-  @media ${device.laptopL}{
+  @media ${device.laptopL} {
     font-size: 2rem;
   }
-  
+
 `
 
 export const DetailsTitle = styled.h4`
@@ -238,30 +238,30 @@ export const DetailsTitle = styled.h4`
     text-transform: uppercase;
   }
 
-@media ${device.laptopL}{
-  font-size: 2rem
-}
+  @media ${device.laptopL} {
+    font-size: 2rem
+  }
 `
 
 export const UlStyle = styled.ul`
-padding: 20px 0px 0px 0px;
+  padding: 20px 0px 0px 0px;
   margin: 0px;
 `
 export const ListStyle = styled.li`
-list-style-type: none;
+  list-style-type: none;
   padding-bottom: 5px;
 `
 export const ShuttleTimeStyle = styled.span`
-font-weight: bold;
+  font-weight: bold;
   color: grey;
-  `
+`
 export const CovidBody = styled.p`
   @media ${device.desktop} {
     font-size: 3rem;
     color: grey;
   }
-  @media ${device.laptopL}{
-   font-size: 2rem;
+  @media ${device.laptopL} {
+    font-size: 2rem;
   }
 `
 /*Anmeldesection*/
@@ -275,10 +275,10 @@ export const FeedbackSection = styled.section` @media ${device.desktop} {
   align-items: center;
   background-color: red
 }
-@media ${device.laptopL}{
-  flex-direction: column;
-  height: 1300px;
-}
+  @media ${device.laptopL} {
+    flex-direction: column;
+    height: 1300px;
+  }
 `
 
 
@@ -291,31 +291,41 @@ export const AnmeldungRight = styled.div`
     width: 50%;
     height: 50%;
   }
-  @media ${device.laptopL}{
+  @media ${device.laptopL} {
     flex-direction: column;
   }
 `
+export const Plusicon = styled.img`
+@media${device.desktop} {
+  height: 30px;
+  display: inline-block;
+  margin: 23px 0px 0px 10px
+
+}
+
+`
+
 
 export const OverNightTitle = styled.h4`
-@media ${device.desktop}{
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: white;
-  text-transform: uppercase;
-}
+  @media ${device.desktop} {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+  }
 
-@media ${device.laptopL}{
-  font-size: 1.5rem;
-  
-}`
+  @media ${device.laptopL} {
+    font-size: 1.5rem;
+
+  }`
 export const AnmeldeTitel = styled.h3`
-@media ${device.desktop}{
-  color: white;
-  font-size: 4rem;
-  font-weight: bold;
-}
+  @media ${device.desktop} {
+    color: white;
+    font-size: 4rem;
+    font-weight: bold;
+  }
 
-  @media ${device.laptopL}{
+  @media ${device.laptopL} {
     font-size: 3rem;
   }
 `
@@ -327,112 +337,122 @@ export const TimeStyle = styled.span`
     text-transform: uppercase;
     color: black;
   }
-  @media ${device.laptopL}{
+  @media ${device.laptopL} {
     font-size: 2rem;
   }
-  
+
 `
 
 export const OverNightBox = styled.div`
-@media ${device.desktop}{
-  display: flex;
-  flex-direction: column;
-  height: 70%;
-  
-}`
+  @media ${device.desktop} {
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+
+  }`
 
 export const OverNightBody = styled.p`
-  
+
   @media ${device.desktop} {
     font-size: 2.5rem;
     color: black;
   }
-  @media ${device.laptopL}{
-   font-size: 1.5rem;
+  @media ${device.laptopL} {
+    font-size: 1.5rem;
   }
 
 `
 export const Anmeldeform = styled.form`
-@media ${device.desktop}{
-  padding: 40px;
-  width: 80%;
-  height: 80%;
-}
-  
+  @media ${device.desktop} {
+    padding: 40px;
+    width: 80%;
+    height: 80%;
+  }
+
 `
 export const AnmeldeLabel = styled.label`
-@media ${device.desktop}{
-  
-  color: black;
-  font-size: 2.5rem;
+  @media ${device.desktop} {
+
+    color: black;
+    font-size: 2.5rem;
+    font-weight: bold;
+    display: block;
+  }
+`
+
+export const CheckboxLabel = styled.label`
+@media${device.desktop}{
+  font-size: 1.5rem;
   font-weight: bold;
-  display: block;
+  vert-align: middle;
+  
+  
 }
 `
+
 export const AnmeldeCheckbox = styled.input`
-width: 50px;
-height: 50px;
-  display: block;
+  width: 30px;
+  height: 30px;
+  margin: 10px 0px;
 `
 export const AnmeldeInput = styled.input`
-@media ${device.desktop} {
-  height: 40px;
-  width: 400px;
-  display: block;
-  margin: 10px 0px 5px 0px;
-  
-  &::placeholder{
-    color: grey;
-    text-transform: uppercase;
-    padding: 5px 0px 5px 20px;
-    font-size: 0.8rem
+  @media ${device.desktop} {
+    height: 40px;
+    width: 400px;
+    margin: 10px 0px 5px 0px;
+
+    &::placeholder {
+      color: grey;
+      text-transform: uppercase;
+      padding: 5px 0px 5px 20px;
+      font-size: 0.8rem
+    }
   }
-}
 `
 
 export const AnmeldeBemerkung = styled.textarea`
-@media ${device.desktop}{
-  height: 150px;
-  width: 400px;
-  display: block;
-  font-family: BlinkMacSystemFont ;
+  @media ${device.desktop} {
+    height: 150px;
+    width: 400px;
+    display: block;
+    font-family: BlinkMacSystemFont ;
 
-  &::placeholder{
-    color: grey;
-    text-transform: uppercase;
-    padding: 5px 0px 5px 20px;
-    font-size: 0.8rem
+    &::placeholder {
+      color: grey;
+      text-transform: uppercase;
+      padding: 5px 0px 5px 20px;
+      font-size: 0.8rem
+    }
   }
-}
 `
 
 
 export const AnmeldeButton = styled.button`
-@media ${device.desktop}{
-  outline: none;
-  border: none;
-  height: 63px;
-  width: 270px;
-  background-color: black;
-  color: white;
-  font-size: 2.5rem;
-  font-weight: bold;
-  transition: 0.5s ease-out;
-  margin-top: 40px;
+  @media ${device.desktop} {
+    outline: none;
+    border: none;
+    height: 63px;
+    width: 270px;
+    background-color: black;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    transition: 0.5s ease-out;
+    margin-top: 40px;
 
-  &:hover {
-    background-color: white;
-    color: black;
-    cursor: pointer;
+    &:hover {
+      background-color: white;
+      color: black;
+      cursor: pointer;
+    }
+
+    @media ${device.laptopL} {
+      height: 50px;
+      width: 230px;
+      font-size: 1.5rem;
+
+    }
   }
-  
-  @media ${device.laptopL}{
-    height: 50px;
-    width: 230px;
-    font-size: 1.5rem;
-    
-  }
-}
 `
 export const Input = styled.input`width: 350px;
   height: 50px;

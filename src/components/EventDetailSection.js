@@ -25,7 +25,7 @@ function EventDetailSection() {
                 </ContactBox>
                 <DirectionBox>
                     <DetailsTitle>Anfahrt</DetailsTitle>
-                    <CovidBody><SpanStyle>HECHT Technologie</SpanStyle><br/><AnchorStyle href="https://goo.gl/maps/mFgtMfEFe1DtekK5A" title="HECHT Technologie Pörnbach Google Maps Navigation" target="_blank">Am Anger 13<br/>85309
+                    <CovidBody><SpanStyle>HECHT Technologie</SpanStyle><br/><AnchorStyle href="https://goo.gl/maps/mFgtMfEFe1DtekK5A" aria-label="Routenplaner öffnen" title="HECHT Technologie Pörnbach Google Maps Navigation" target="_blank">Am Anger 13<br/>85309
                         Pörnbach</AnchorStyle></CovidBody>
                 </DirectionBox>
                 <CovidBox>
