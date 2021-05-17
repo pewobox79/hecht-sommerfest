@@ -30,13 +30,13 @@ const Intro = styled.div`
 const Title = styled.h1`
 
   @media ${device.desktop} {
-    font-size: 6rem;
+    font-size: 5rem;
     color: white;
     text-transform: uppercase;
     font-weight: bolder;
   }
   @media ${device.laptopL} {
-    font-size: 4.5rem;
+    font-size: 4rem;
     
   }
   @media ${device.tablet} {
@@ -48,7 +48,7 @@ const Title = styled.h1`
   }
 `
 const Nav = styled.nav`
-  height: 50px;
+  height: 30px;
   margin: 0px;
 `
 
@@ -58,11 +58,11 @@ const List = styled.li`
     list-style-type: none;
     color: white;
     float: left;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: bold;
   }
   @media ${device.laptopL} {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   @media ${device.tablet} {
     font-size: 1.5rem;

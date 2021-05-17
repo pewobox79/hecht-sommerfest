@@ -8,7 +8,15 @@ import {
     DetailsTitle,
     UlStyle,
     AnchorStyle,
-    CovidBody, OuterRight, SpanStyle, ServiceBox, ListStyle, ShuttleTimeStyle
+    CovidBody,
+    OuterRight,
+    SpanStyle,
+    ServiceBox,
+    ListStyle,
+    ShuttleTimeStyle,
+    OverNightTitle,
+    OverNightBody,
+    AnmeldeButton, OverNightBox
 } from "../styled";
 
 function EventDetailSection() {
@@ -29,7 +37,7 @@ function EventDetailSection() {
                         Pörnbach</AnchorStyle></CovidBody>
                 </DirectionBox>
                 <CovidBox>
-                    <DetailsTitle>Covid19-Schellteststation</DetailsTitle>
+                    <DetailsTitle>Covid19-Schnellteststation</DetailsTitle>
                     <CovidBody>Wir nehmen Ihre und unsere Gesundheit ernst und lassen jedem Gast vor Betreten des
                         Festgeländes einen professionellen Corona Tests durch das BRK durchführen</CovidBody>
                 </CovidBox>
@@ -37,16 +45,9 @@ function EventDetailSection() {
             <OuterRight>
                 <CovidBox>
                     <DetailsTitle>Shuttleservice</DetailsTitle>
-                    <CovidBody><SpanStyle>Unser HECHT Shuttle-Stadtbus fährt folgende Stationen an:</SpanStyle>
-                        <UlStyle>
-                            <ListStyle><ShuttleTimeStyle>22:00 Uhr: </ShuttleTimeStyle>Hohenwart-Tegernbach-Waidhofen-Schrobenhausen</ListStyle>
-                            <ListStyle><ShuttleTimeStyle>22:30 Uhr: </ShuttleTimeStyle>Pfaffenhofen</ListStyle>
-                            <ListStyle><ShuttleTimeStyle>00:00 Uhr: </ShuttleTimeStyle>Hohenwart-Tegernbach-Waidhofen-Schrobenhausen</ListStyle>
-                            <ListStyle><ShuttleTimeStyle>00:30 Uhr: </ShuttleTimeStyle>Pfaffenhofen</ListStyle>
-                            <ListStyle><ShuttleTimeStyle>02:00 Uhr: </ShuttleTimeStyle>Hohenwart-Tegernbach-Waidhofen-Schrobenhausen</ListStyle>
-                            <ListStyle><ShuttleTimeStyle>02:30 Uhr: </ShuttleTimeStyle>Pfaffenhofen</ListStyle>
-                        </UlStyle></CovidBody>
+                    <CovidBody>Jeweils um <SpanStyle>22:00, 00:00</SpanStyle> &amp; <SpanStyle>02:00 Uhr</SpanStyle> fährt unser Shuttle nach Schrobenhausen und Pfaffenhofen.</CovidBody>
                 </CovidBox>
+
             </OuterRight>
         </EventInfoSection>
     )

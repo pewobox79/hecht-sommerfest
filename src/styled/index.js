@@ -20,11 +20,12 @@ export const IntroSectionStyle = styled.div`
 
 export const WelcomeStyle = styled.div`
 
-  font-size: 3rem;
+  font-size: 2.5rem;
   padding: 20px;
   overflow: visible;
   flex-grow: 1;
   width: 70%;
+  
   @media ${device.laptopL} {
     text-align: left;
     font-size: 2rem;
@@ -44,14 +45,14 @@ export const DateFieldStyle = styled.div`
   }
 `
 export const Date = styled.div`
-  font-size: 7rem;
+  font-size: 6.5rem;
   font-weight: bold;
   color: red;
   text-align: center;
 
   @media ${device.tablet} {
     padding-right: 30px;
-    font-size: 5rem;
+    font-size: 4.5rem;
 
   }
 `
@@ -60,6 +61,8 @@ export const TimeFieldStyle = styled.div`
   display: flex;
   justify-content: center;
   flex-grow: 1;
+  width: 30%;
+  margin: 20px 0px 0px 0px;
 
   @media ${device.tablet} {
     justify-content: normal;
@@ -70,10 +73,12 @@ export const TimeFieldStyle = styled.div`
 
 `
 export const Time = styled.time`
-  font-size: 5rem;
-  color: red;
+  @media${device.desktop} {
+    font-size: 4rem;
+    color: red;
+  }
 
-  @media ${device.tablet} {
+  @media ${device.laptopL} {
     font-size: 3rem;
   }
 
@@ -149,6 +154,8 @@ export const OuterLeft = styled.div`
     align-items: center;
     width: 50%;
     height: 100%;
+    margin: 10px;
+    
   }
   @media ${device.laptopL} {
 
@@ -160,6 +167,8 @@ export const OuterRight = styled.div`
     flex-direction: row;
     width: 50%;
     height: 100%;
+    margin: 10px
+    
   }
   @media ${device.laptopL} {
     flex-direction: column;
@@ -183,11 +192,11 @@ export const ContactBox = styled.div`
 export const AnchorStyle = styled.a`
   @media ${device.desktop} {
     color: grey;
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-decoration: none;
   }
   @media ${device.laptopL} {
-    font-size: 2rem
+    font-size: 1.5rem
   }
 `
 
@@ -221,18 +230,18 @@ export const CovidBox = styled.div`
 export const SpanStyle = styled.span`
   @media ${device.desktop} {
     font-weight: bold;
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-transform: uppercase;
   }
   @media ${device.laptopL} {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
 `
 
 export const DetailsTitle = styled.h4`
   @media ${device.desktop} {
-    font-size: 4rem;
+    font-size: 3.2rem;
     color: red;
     padding-bottom: 40px;
     text-transform: uppercase;
@@ -244,7 +253,7 @@ export const DetailsTitle = styled.h4`
 `
 
 export const UlStyle = styled.ul`
-  padding: 20px 0px 0px 0px;
+  padding: 0px;
   margin: 0px;
 `
 export const ListStyle = styled.li`
@@ -257,11 +266,11 @@ export const ShuttleTimeStyle = styled.span`
 `
 export const CovidBody = styled.p`
   @media ${device.desktop} {
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: grey;
   }
   @media ${device.laptopL} {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 `
 /*Anmeldesection*/
@@ -321,12 +330,13 @@ export const OverNightTitle = styled.h4`
 export const AnmeldeTitel = styled.h3`
   @media ${device.desktop} {
     color: white;
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: bold;
+    
   }
 
   @media ${device.laptopL} {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 `
 
@@ -354,11 +364,11 @@ export const OverNightBox = styled.div`
 export const OverNightBody = styled.p`
 
   @media ${device.desktop} {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: black;
   }
   @media ${device.laptopL} {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 
 `
@@ -377,6 +387,7 @@ export const AnmeldeLabel = styled.label`
     font-size: 2.5rem;
     font-weight: bold;
     display: block;
+    margin-bottom: 30px;
   }
 `
 
@@ -394,6 +405,7 @@ export const AnmeldeCheckbox = styled.input`
   width: 30px;
   height: 30px;
   margin: 10px 0px;
+  margin: 0px 10px 0px 0px
 `
 export const AnmeldeInput = styled.input`
   @media ${device.desktop} {
@@ -435,7 +447,7 @@ export const AnmeldeButton = styled.button`
     width: 270px;
     background-color: black;
     color: white;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: bold;
     transition: 0.5s ease-out;
     margin-top: 40px;
@@ -449,7 +461,7 @@ export const AnmeldeButton = styled.button`
     @media ${device.laptopL} {
       height: 50px;
       width: 230px;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
 
     }
   }

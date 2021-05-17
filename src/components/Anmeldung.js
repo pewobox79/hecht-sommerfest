@@ -41,16 +41,16 @@ function Anmeldung() {
             <OuterLeft>
                 <AnmeldeTitel>Wir bitten um Rückmeldung bis zum <TimeStyle>xx.xx.xx</TimeStyle></AnmeldeTitel>
                 <Anmeldeform action="mailto:pewobox79@gmail.com?subject=Sommerfest" enctype="text/plain">
-                    <AnmeldeLabel>Anmeldung für den Familiennachmittag</AnmeldeLabel>
+                    <AnmeldeLabel>Anmeldung</AnmeldeLabel>
 
                     <AnmeldeCheckbox type="checkbox" id="ja1" name="allein" value="Ich komme zum Event allein"/>
-                    <CheckboxLabel for="allein">Ich komme zum Event allein</CheckboxLabel><br/>
+                    <CheckboxLabel for="allein">Ja, ich komme allein zum Event</CheckboxLabel><br/>
                     <AnmeldeCheckbox type="checkbox" id="ja2" name="begleitperson"
                                      value="Ich komme mit Begleitung zum Event" onClick={handleBegleitperson}/>
-                    <CheckboxLabel for="begleitperson">Ich komme mit Begleitperson</CheckboxLabel><br/>
+                    <CheckboxLabel for="begleitperson">Ja, ich komme mit einer Begleitperson</CheckboxLabel><br/>
                     <AnmeldeCheckbox type="checkbox" id="shuttleservice" name="shuttle"
                                      value="Ich benötige einen Shuttle Service"/>
-                    <CheckboxLabel for="shuttle">Ich benötige einen Shuttle Service</CheckboxLabel><br/>
+                    <CheckboxLabel for="shuttle">Ich habe interesse am Shuttle Service</CheckboxLabel><br/>
                     <AnmeldeCheckbox type="checkbox" id="nein" name="vehicle1"
                                      value="Nein, ich kann leider nicht kommen!"/>
                     <CheckboxLabel for="ich komme">Nein, ich kann leider nicht kommen</CheckboxLabel><br/>
@@ -72,7 +72,7 @@ function Anmeldung() {
                     <OverNightBody><strong>Hotel Bogenrieder in
                         Pörnbach</strong><br/>Sie möchten gern Übernachten? <br/>Wir empfehlen Ihnen das zu Fuß
                         erreichbare Hotel Bogenrieder.</OverNightBody>
-                    <a href="https://hotel-bogenrieder.de/hotel/onCheckboxListne-buchung/"
+                    <a href="https://hotel-bogenrieder.de/hotel/online-buchung/"
                        target="_blank"><AnmeldeButton>Reservieren</AnmeldeButton></a>
                 </OverNightBox>
             </AnmeldungRight>
