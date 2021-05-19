@@ -8,7 +8,6 @@ function EventDetails() {
         <EventWrapper id="details">
             <EventDetailSection />
         </EventWrapper>
-
     )
 }
 

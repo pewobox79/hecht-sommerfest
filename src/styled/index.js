@@ -85,7 +85,8 @@ export const IntroSectionStyle = styled.div`
 
 } @media${device.mobileL} {
   flex-direction: column;
-  height: 1000px
+  height: 1000px;
+  padding-bottom: 0px;
 }
 `
 
@@ -105,7 +106,20 @@ export const WelcomeStyle = styled.div`
 } @media${device.mobileL} {
   font-size: 1.3rem;
   overflow: hidden;
-  width: 90%
+  width: 90%;
+  line-height: 30px;
+}
+`
+
+export const CounterFieldStyle = styled.div`
+@media${device.desktop} {
+  display: flex;
+  justify-content: center;
+  background-color: green;
+} @media${device.laptopL} {
+
+} @media${device.mobileL} {
+  flex-direction: column;
 }
 `
 export const DateFieldStyle = styled.div`
@@ -129,8 +143,7 @@ export const Date = styled.div`
   padding-right: 30px;
   margin: 20px;
   font-size: 4.5rem;
-  width: 30%
-
+  width: 30%;
 }
 `
 
@@ -215,6 +228,7 @@ export const EventWrapper = styled.div`
 
 } @media${device.mobileL} {
   flex-direction: column;
+  height: 1200px;
 }
 
 `
@@ -229,7 +243,6 @@ export const EventInfoSection = styled.section`
 } @media${device.laptop} {
   flex-direction: column;
   height: 1200px;
-
 }
 
 `
@@ -265,6 +278,7 @@ export const OuterRight = styled.div`
 
 } @media${device.mobileL} {
   flex-wrap: nowrap;
+  z-index: 400;
 
 }
 
@@ -282,6 +296,7 @@ export const ContactBox = styled.div`
 
 } @media${device.mobileL} {
   width: 100%;
+  height: 280px;
 }`
 
 export const AnchorStyle = styled.a`
@@ -302,7 +317,8 @@ export const DirectionBox = styled.div`
   padding: 20px;
 
 } @media${device.mobileL} {
-  width: 100%
+  width: 100%;
+  height: 50px;
 }
 `
 export const CovidBox = styled.div`
@@ -338,7 +354,7 @@ export const DetailsTitle = styled.h4`
 } @media${device.laptopL} {
   font-size: 2.5rem
 } @media${device.mobileL} {
-  font-size: 1.5rem
+  font-size: 2rem
 }
 `
 
@@ -421,6 +437,8 @@ export const AnmeldeTitel = styled.h3`
 } @media${device.laptopL} {
   font-size: 4rem;
   padding-top: 40px;
+} @media${device.mobileL} {
+  font-size: 2.3rem;
 }
 `
 
@@ -432,6 +450,8 @@ export const TimeStyle = styled.span`
   color: black;
 } @media${device.laptopL} {
   font-size: 4rem;
+} @media${device.mobileL} {
+  font-size: 2.3rem
 }
 
 `
@@ -444,6 +464,9 @@ export const OverNightBox = styled.div`
 
 } @media${device.laptopL} {
   margin: 0px 0px 0px 40px;
+}
+@media${device.mobileL}{
+  margin: 20px
 }`
 
 export const OverNightBody = styled.p`
@@ -467,11 +490,11 @@ export const Anmeldeform = styled.form`
   height: 60%
 } @media${device.mobileL} {
   padding: 0px;
-  width: 100%
+  width: 100%;
+  margin: 15px;
 }
-
-
 `
+
 export const AnmeldeLabel = styled.label`
 @media${device.desktop} {
 
@@ -493,7 +516,7 @@ export const CheckboxLabel = styled.label`
   font-weight: bold;
   vert-align: middle;
 } @media${device.mobileL} {
-  font-size: 1.1rem;
+  font-size: 1rem;
 
 }
 `
