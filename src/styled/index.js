@@ -232,7 +232,6 @@ export const EventInfoSection = styled.section`
 
 }
 
-
 `
 
 export const OuterLeft = styled.div`
@@ -243,13 +242,13 @@ export const OuterLeft = styled.div`
   width: 50%;
   height: 100%;
   flex-wrap: wrap;
+  margin: 30px;
 
 } @media${device.laptopL} {
   align-items: flex-start;
 } @media${device.mobileL} {
   flex-direction: column;
   width: 90%;
-
 }
 `
 export const OuterRight = styled.div`
@@ -258,6 +257,7 @@ export const OuterRight = styled.div`
   flex-direction: row;
   width: 50%;
   height: 100%;
+  margin: 30px
 
 } @media${device.laptopL} {
   flex-direction: column;
@@ -368,7 +368,7 @@ export const FeedbackSection = styled.section` @media${device.desktop} {
   background-color: red
 } @media${device.laptopL} {
   flex-direction: column;
-  height: 1300px;
+  height: 1500px;
 }
 `
 
@@ -416,6 +416,7 @@ export const AnmeldeTitel = styled.h3`
   color: white;
   font-size: 3rem;
   font-weight: bold;
+  margin: 40px
 
 } @media${device.laptopL} {
   font-size: 4rem;
@@ -441,6 +442,8 @@ export const OverNightBox = styled.div`
   flex-direction: column;
   height: 70%;
 
+} @media${device.laptopL} {
+  margin: 0px 0px 0px 40px;
 }`
 
 export const OverNightBody = styled.p`
