@@ -2,10 +2,83 @@ import HechtFooter from '../assets/images/HECHT_Einladungskarte_Motiv_MA-Footer.
 import HechtStars from '../assets/images/HECHT_Erfoeffnungsfeier_Digital_HG Kopie.png'
 import HechtHq from '../assets/images/HECHT_Poernbach.jpg'
 import {device} from "./device";
-
+import hecht from "../assets/images/HECHT_Einladungskarte_Motiv_MA-Header.jpg";
 import styled from "styled-components";
 
 
+/*main header css*/
+
+export const Wrapper = styled.section`
+@media${device.desktop} {
+  height: 50vh;
+  background-image: url(${hecht});
+  background-size: cover;
+  width: 100%;
+}
+
+`
+export const MainHeaderStyle = styled.div`
+@media${device.desktop} {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}`
+
+export const Intro = styled.div`
+@media${device.desktop} {
+  width: 50%;
+  position: absolute;
+  padding-left: 10%;
+}
+  @media ${device.tablet} {
+    width: 100%;
+  }
+
+`
+export const Title = styled.h1`
+
+  @media ${device.desktop} {
+    font-size: 5rem;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bolder;
+  }
+  @media ${device.laptopL} {
+    font-size: 4rem;
+
+  }
+  @media ${device.tablet} {
+    font-size: 3rem;
+  }
+
+  @media ${device.laptop} {
+    font-size: 3rem;
+  }
+`
+export const Nav = styled.nav`
+@media${device.desktop} {
+  height: 30px;
+  margin: 0px;
+}`
+
+export const List = styled.li`
+  @media ${device.desktop} {
+    text-transform: uppercase;
+    list-style-type: none;
+    color: white;
+    float: left;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  @media ${device.laptopL} {
+    font-size: 1.5rem;
+  }
+  @media ${device.tablet} {
+    font-size: 1.5rem;
+  }
+
+`
 /*start introduction incl. time and date*/
 export const IntroSectionStyle = styled.div`
   display: flex;
@@ -15,22 +88,30 @@ export const IntroSectionStyle = styled.div`
 
   @media ${device.tablet} {
     flex-direction: column;
+    height: 100vh
   }
 `
 
 export const WelcomeStyle = styled.div`
 
   font-size: 2.5rem;
-  padding: 20px;
+  margin: 20px;
   overflow: visible;
   flex-grow: 1;
   width: 70%;
-  
+
   @media ${device.laptopL} {
     text-align: left;
     font-size: 2rem;
+    margin: 20px;
   }
+@media${device.mobileL} {
+  font-size: 1.3rem;
+  overflow: hidden;
+  width: 90%
 
+
+}
 `
 export const DateFieldStyle = styled.div`
   flex-grow: 1;
@@ -39,17 +120,17 @@ export const DateFieldStyle = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media ${device.tablet} {
+  @media ${device.mobileL} {
     flex-direction: row;
-    justify-content: space-between;
+    margin-left: 20px
   }
 `
-export const Date = styled.div`
+export const Date = styled.div`@media${device.desktop} {
   font-size: 6.5rem;
   font-weight: bold;
   color: red;
   text-align: center;
-
+}
   @media ${device.tablet} {
     padding-right: 30px;
     font-size: 4.5rem;
@@ -64,19 +145,21 @@ export const TimeFieldStyle = styled.div`
   width: 30%;
   margin: 20px 0px 0px 0px;
 
-  @media ${device.tablet} {
+  @media ${device.mobileL} {
     justify-content: normal;
     align-items: flex-start;
+    margin: 20px;
+    width: 100%
   }
 
 
 
 `
 export const Time = styled.time`
-  @media${device.desktop} {
-    font-size: 4rem;
-    color: red;
-  }
+@media${device.desktop} {
+  font-size: 4rem;
+  color: red;
+}
 
   @media ${device.laptopL} {
     font-size: 3rem;
@@ -129,6 +212,26 @@ export const ImgTitle = styled.h3`
 `
 /*End main hecht image section before footer*/
 
+/*start event detail section*/
+export const EventWrapper = styled.div`
+@media${device.desktop} {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  width: 100%;
+  height: 100vh;
+} 
+@media${device.laptopL} {
+  height: 1200px;
+  
+}
+  @media${device.mobileL}{
+  flex-direction: column;
+}
+
+`
+
+
 export const EventInfoSection = styled.section`
   @media ${device.desktop} {
     display: flex;
@@ -150,16 +253,20 @@ export const OuterLeft = styled.div`
   @media ${device.desktop} {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     align-items: center;
     width: 50%;
     height: 100%;
-    margin: 10px;
-    
-  }
-  @media ${device.laptopL} {
+    flex-wrap: wrap;
 
   }
+  @media ${device.laptopL} {
+    align-items: flex-start;
+  }
+@mobile${device.mobileL} {
+  flex-direction: column;
+  width: 90%;
+ 
+}
 `
 export const OuterRight = styled.div`
   @media ${device.desktop} {
@@ -167,12 +274,18 @@ export const OuterRight = styled.div`
     flex-direction: row;
     width: 50%;
     height: 100%;
-    margin: 10px
-    
+
   }
   @media ${device.laptopL} {
     flex-direction: column;
+    
+
   }
+@media${device.mobileL} {
+  flex-wrap: nowrap;
+  
+}
+
 `
 export const ContactBox = styled.div`
   @media ${device.desktop} {
@@ -181,13 +294,16 @@ export const ContactBox = styled.div`
     height: 50%;
     padding: 20px;
     justify-content: center;
-    overflow: hidden;
   }
 
   @media ${device.laptopL} {
-
+    width: 50%;
     font-size: 1.4rem
-  }`
+
+  }
+@media${device.mobileL}{
+  width: 100%
+}`
 
 export const AnchorStyle = styled.a`
   @media ${device.desktop} {
@@ -200,16 +316,6 @@ export const AnchorStyle = styled.a`
   }
 `
 
-export const ServiceBox = styled.div`
-  @media ${device.desktop} {
-    box-sizing: border-box;
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-    justify-content: center;
-
-  }`
-
 export const DirectionBox = styled.div`
   @media ${device.desktop} {
     width: 50%;
@@ -217,15 +323,24 @@ export const DirectionBox = styled.div`
     box-sizing: border-box;
     padding: 20px;
 
-  }`
+  }
+@media${device.mobileL} {
+  width: 100%
+}
+`
 export const CovidBox = styled.div`
   @media ${device.desktop} {
     display: block;
     width: 100%;
     height: 50%;
-    padding: 20px;
+   padding: 20px;
+  }
+@media${device.mobileL} {
+  padding: 10px;
+  width: 90%;
+}
 
-  }`
+`
 
 export const SpanStyle = styled.span`
   @media ${device.desktop} {
@@ -250,19 +365,15 @@ export const DetailsTitle = styled.h4`
   @media ${device.laptopL} {
     font-size: 2rem
   }
+
+@media${device.mobileL} {
+  font-size: 1.5rem
+}
 `
 
 export const UlStyle = styled.ul`
   padding: 0px;
   margin: 0px;
-`
-export const ListStyle = styled.li`
-  list-style-type: none;
-  padding-bottom: 5px;
-`
-export const ShuttleTimeStyle = styled.span`
-  font-weight: bold;
-  color: grey;
 `
 export const CovidBody = styled.p`
   @media ${device.desktop} {
@@ -272,6 +383,9 @@ export const CovidBody = styled.p`
   @media ${device.laptopL} {
     font-size: 1.5rem;
   }
+@media${device.mobileL} {
+  font-size: 1.3rem
+}
 `
 /*Anmeldesection*/
 
@@ -303,6 +417,9 @@ export const AnmeldungRight = styled.div`
   @media ${device.laptopL} {
     flex-direction: column;
   }
+  @media ${device.mobileL} {
+    margin: 20px;
+  }
 `
 export const Plusicon = styled.img`
 @media${device.desktop} {
@@ -326,13 +443,17 @@ export const OverNightTitle = styled.h4`
   @media ${device.laptopL} {
     font-size: 1.5rem;
 
+  }
+  @media ${device.mobileL} {
+    font-size: 1.3rem;
+
   }`
 export const AnmeldeTitel = styled.h3`
   @media ${device.desktop} {
     color: white;
     font-size: 3rem;
     font-weight: bold;
-    
+
   }
 
   @media ${device.laptopL} {
@@ -370,6 +491,9 @@ export const OverNightBody = styled.p`
   @media ${device.laptopL} {
     font-size: 1.6rem;
   }
+  @media ${device.mobileL} {
+    font-size: 1.3rem;
+  }
 
 `
 export const Anmeldeform = styled.form`
@@ -378,6 +502,11 @@ export const Anmeldeform = styled.form`
     width: 80%;
     height: 80%;
   }
+@media${device.mobileL} {
+  padding: 0px;
+  width: 100%
+}
+
 
 `
 export const AnmeldeLabel = styled.label`
@@ -389,15 +518,21 @@ export const AnmeldeLabel = styled.label`
     display: block;
     margin-bottom: 30px;
   }
+@media${device.mobileL} {
+  font-size: 2rem;
+  margin-top: 30px;
+
+}
 `
 
 export const CheckboxLabel = styled.label`
-@media${device.desktop}{
+@media${device.desktop} {
   font-size: 1.5rem;
   font-weight: bold;
   vert-align: middle;
-  
-  
+} @media${device.mobileL} {
+  font-size: 1.1rem;
+
 }
 `
 
@@ -420,6 +555,9 @@ export const AnmeldeInput = styled.input`
       font-size: 0.8rem
     }
   }
+@media${device.mobileL} {
+  width: 90%
+}
 `
 
 export const AnmeldeBemerkung = styled.textarea`
@@ -436,6 +574,8 @@ export const AnmeldeBemerkung = styled.textarea`
       font-size: 0.8rem
     }
   }
+@media${device.mobileL} {
+  width: 90%
 `
 
 

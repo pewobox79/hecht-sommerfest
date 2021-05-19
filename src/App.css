@@ -1,10 +1,7 @@
 * {
     scroll-behavior: smooth;
     margin: 0px;
-}
-
-html, body {
-    overflow-x: hidden;
+    padding: 0px;
 }
 
 a:hover {
