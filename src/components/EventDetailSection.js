@@ -31,8 +31,7 @@ function EventDetailSection() {
                 </DirectionBox>
                 <CovidBox>
                     <DetailsTitle>Covid19-Schnellteststation</DetailsTitle>
-                    <CovidBody>Wir nehmen Ihre und unsere Gesundheit ernst und lassen jedem Gast vor Betreten des
-                        Festgeländes einen professionellen Corona Tests durch das BRK durchführen</CovidBody>
+                    <CovidBody>Wir nehmen Ihre und unsere Gesundheit ernst! Das Betreten des Festgeländes ist nur mit einem negativen PCR Test (max. 24h alt), einem Corona-Impfnachweis oder einem Schnelltest durch das BRK vor Ort möglich.</CovidBody>
                 </CovidBox>
             </OuterLeft>
             <OuterRight>
