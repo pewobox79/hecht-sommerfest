@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import './assets/fonts/SourceSansPro-Light.ttf'
+import './assets/fonts/SourceSansPro-Light.woff'
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 

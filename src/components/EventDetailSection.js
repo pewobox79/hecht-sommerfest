@@ -37,7 +37,7 @@ function EventDetailSection() {
             <OuterRight>
                 <CovidBox>
                     <DetailsTitle>Shuttleservice</DetailsTitle>
-                    <CovidBody>Jeweils um <SpanStyle>22:00, 00:00</SpanStyle> &amp; <SpanStyle>02:00 Uhr</SpanStyle> <br/>fährt unser Shuttle nach <br/>Schrobenhausen und Pfaffenhofen.</CovidBody>
+                    <CovidBody>Jeweils um <SpanStyle>22:00, 00:00</SpanStyle> &amp; <SpanStyle>02:00 Uhr</SpanStyle> fährt unser Shuttle nach Schrobenhausen und Pfaffenhofen.</CovidBody>
                 </CovidBox>
 
             </OuterRight>

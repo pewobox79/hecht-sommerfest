@@ -7,6 +7,7 @@ import EventDetails from "./components/EventDetails";
 import Feedback from "./components/Feedback";
 import IntroSection from "./components/IntroSection";
 import ImgSection from "./components/ImgSection";
+import TestFetch from "./components/TestFetch";
 
 function App() {
 

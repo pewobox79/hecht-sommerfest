@@ -2,6 +2,7 @@ import HechtFooter from '../assets/images/HECHT_Einladungskarte_Motiv_MA-Footer.
 import HechtStars from '../assets/images/HECHT_Erfoeffnungsfeier_Digital_HG Kopie.png'
 import HechtHq from '../assets/images/HECHT_Poernbach.jpg'
 import {device} from "./device";
+import {color} from './color'
 import hecht from "../assets/images/HECHT_Einladungskarte_Motiv_MA-Header.jpg";
 import styled from "styled-components";
 
@@ -93,16 +94,19 @@ export const IntroSectionStyle = styled.div`
 export const WelcomeStyle = styled.div`
 @media${device.desktop} {
   font-size: 2.5rem;
-  margin: 20px;
+  margin: 30px;
   overflow: visible;
   flex-grow: 1;
   width: 70%;
+  color: ${color.grey};
 } @media${device.laptopL} {
   text-align: left;
   font-size: 2rem;
   margin: 20px;
   width: 60%;
   line-height: 40px;
+} @media${device.tablet} {
+  font-size: 1.3rem;
 } @media${device.mobileL} {
   font-size: 1.3rem;
   overflow: hidden;
@@ -128,6 +132,9 @@ export const DateFieldStyle = styled.div`
   text-align: center;
   display: flex;
   flex-direction: column;
+
+} @media${device.tablet} {
+
 } @media${device.mobileL} {
   flex-direction: row;
   margin-left: 20px;
@@ -139,6 +146,10 @@ export const Date = styled.div`
   font-weight: bold;
   color: red;
   text-align: center;
+} @media${device.laptopL} {
+  font-size: 6rem;
+} @media${device.tablet} {
+
 } @media${device.mobileL} {
   padding-right: 30px;
   margin: 20px;
@@ -154,6 +165,8 @@ export const TimeFieldStyle = styled.div`
   flex-grow: 1;
   width: 30%;
   margin: 20px 0px 0px 0px;
+} @media${device.tablet} {
+  padding-left: 30px;
 } @media${device.mobileL} {
   justify-content: normal;
   align-items: flex-start;
@@ -225,10 +238,14 @@ export const EventWrapper = styled.div`
   width: 100%;
   height: 100vh;
 } @media${device.laptopL} {
-
+  height: 900px
+} @media${device.laptop} {
+  height: 1400px
+} @media${device.tablet} {
+  height: 1600px
 } @media${device.mobileL} {
   flex-direction: column;
-  height: 1200px;
+  height: 1600px;
 }
 
 `
@@ -240,6 +257,8 @@ export const EventInfoSection = styled.section`
   flex-direction: row;
   width: 100%;
   height: 100vh;
+} @media${device.laptopL} {
+
 } @media${device.laptop} {
   flex-direction: column;
   height: 1200px;
@@ -259,6 +278,10 @@ export const OuterLeft = styled.div`
 
 } @media${device.laptopL} {
   align-items: flex-start;
+} @media${device.tablet} {
+  width: 100%;
+  margin: 0px;
+  padding-bottom: 30px;
 } @media${device.mobileL} {
   flex-direction: column;
   width: 90%;
@@ -274,7 +297,9 @@ export const OuterRight = styled.div`
 
 } @media${device.laptopL} {
   flex-direction: column;
-
+} @media${device.tablet} {
+  padding-top: 20px;
+  margin: 0px;
 
 } @media${device.mobileL} {
   flex-wrap: nowrap;
@@ -288,12 +313,15 @@ export const ContactBox = styled.div`
   box-sizing: border-box;
   width: 50%;
   height: 50%;
-  padding: 20px;
+  padding: 20px 20px 10px 10px;
   justify-content: center;
 } @media${device.laptopL} {
   width: 50%;
   font-size: 1.4rem
 
+} @media${device.tablet} {
+  width: 50%;
+  font-size: 1.4rem;
 } @media${device.mobileL} {
   width: 100%;
   height: 280px;
@@ -301,7 +329,7 @@ export const ContactBox = styled.div`
 
 export const AnchorStyle = styled.a`
 @media${device.desktop} {
-  color: grey;
+  color: ${color.grey};
   font-size: 2.5rem;
   text-decoration: none;
 } @media${device.laptopL} {
@@ -316,6 +344,8 @@ export const DirectionBox = styled.div`
   box-sizing: border-box;
   padding: 20px;
 
+} @media${device.tablet} {
+
 } @media${device.mobileL} {
   width: 100%;
   height: 50px;
@@ -327,8 +357,12 @@ export const CovidBox = styled.div`
   width: 100%;
   height: 50%;
   padding: 20px;
+} @media${device.tablet} {
+  margin-bottom: 50px;
+  width: 100%;
 } @media${device.mobileL} {
   padding: 10px;
+  width: 90%;
   width: 90%;
 }
 
@@ -348,7 +382,7 @@ export const SpanStyle = styled.span`
 export const DetailsTitle = styled.h4`
 @media${device.desktop} {
   font-size: 3.2rem;
-  color: red;
+  color: ${color.red};
   padding-bottom: 40px;
   text-transform: uppercase;
 } @media${device.laptopL} {
@@ -365,9 +399,12 @@ export const UlStyle = styled.ul`
 export const CovidBody = styled.p`
 @media${device.desktop} {
   font-size: 2.5rem;
-  color: grey;
+  color: ${color.grey};
+  width: 100%;
 } @media${device.laptopL} {
   font-size: 2rem;
+} @media${device.tablet} {
+
 } @media${device.mobileL} {
   font-size: 1.3rem
 }
@@ -382,9 +419,13 @@ export const FeedbackSection = styled.section` @media${device.desktop} {
   justify-content: center;
   align-items: center;
   background-color: red
+} @media${device.laptop} {
+  height: 1700px;
 } @media${device.laptopL} {
   flex-direction: column;
   height: 1500px;
+} @media${device.tablet} {
+  height: 1800px;
 }
 `
 
@@ -447,7 +488,7 @@ export const TimeStyle = styled.span`
 @media${device.desktop} {
   font-weight: bold;
   text-transform: uppercase;
-  color: black;
+  color: ${color.grey};
 } @media${device.laptopL} {
   font-size: 4rem;
 } @media${device.mobileL} {
@@ -464,8 +505,7 @@ export const OverNightBox = styled.div`
 
 } @media${device.laptopL} {
   margin: 0px 0px 0px 40px;
-}
-@media${device.mobileL}{
+} @media${device.mobileL} {
   margin: 20px
 }`
 
@@ -473,7 +513,7 @@ export const OverNightBody = styled.p`
 
 @media${device.desktop} {
   font-size: 2rem;
-  color: black;
+  color: ${color.grey};
 } @media${device.laptopL} {
   font-size: 1.6rem;
 } @media${device.mobileL} {
@@ -498,7 +538,7 @@ export const Anmeldeform = styled.form`
 export const AnmeldeLabel = styled.label`
 @media${device.desktop} {
 
-  color: black;
+  color: ${color.grey};
   font-size: 2.5rem;
   font-weight: bold;
   display: block;
@@ -515,6 +555,7 @@ export const CheckboxLabel = styled.label`
   font-size: 1.5rem;
   font-weight: bold;
   vert-align: middle;
+  color: ${color.grey}
 } @media${device.mobileL} {
   font-size: 1rem;
 
@@ -534,7 +575,7 @@ export const AnmeldeInput = styled.input`
   margin: 10px 0px 5px 0px;
 
   &::placeholder {
-    color: grey;
+    color: ${color.grey};
     text-transform: uppercase;
     padding: 5px 0px 5px 20px;
     font-size: 0.8rem
@@ -552,7 +593,7 @@ export const AnmeldeBemerkung = styled.textarea`
   font-family: BlinkMacSystemFont;
 
   &::placeholder {
-    color: grey;
+    color: ${color.grey};
     text-transform: uppercase;
     padding: 5px 0px 5px 20px;
     font-size: 0.8rem
@@ -568,7 +609,7 @@ export const AnmeldeButton = styled.button`
   border: none;
   height: 63px;
   width: 270px;
-  background-color: black;
+  background-color: ${color.grey};
   color: white;
   font-size: 2rem;
   font-weight: bold;
@@ -577,7 +618,7 @@ export const AnmeldeButton = styled.button`
 
   &:hover {
     background-color: white;
-    color: black;
+    color: ${color.grey};
     cursor: pointer;
   }
 
