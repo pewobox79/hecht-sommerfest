@@ -21,8 +21,8 @@ function EventDetailSection() {
                     <DetailsTitle>Kontakt</DetailsTitle>
                     <CovidBody><SpanStyle>Yessica Wolf</SpanStyle><br/>
                         <AnchorStyle
-                        href="tel:004984418956700" aria-label="+49 8441 895 6700">Telefon</AnchorStyle><br/><AnchorStyle
-                        href="mailto:event@hecht.eu" aria-label="event@hecht.eu">Email</AnchorStyle></CovidBody>
+                        href="tel:004984418956700" aria-label="+49 8441 895 6700">+49 8441 89 56 700</AnchorStyle><br/><AnchorStyle
+                        href="mailto:event@hecht.eu" aria-label="event@hecht.eu">event@hecht.eu</AnchorStyle></CovidBody>
                 </ContactBox>
                 <DirectionBox>
                     <DetailsTitle>Anfahrt</DetailsTitle>
