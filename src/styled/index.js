@@ -1,8 +1,8 @@
 import HechtFooter from '../assets/images/HECHT_Einladungskarte_Motiv_MA-Footer.jpg'
-import HechtStars from '../assets/images/HECHT_Erfoeffnungsfeier_Digital_HG Kopie.png'
+import HechtStars from '../assets/images/HECHT_Erfoeffnungsfeier_Digital_HG.jpg'
 import HechtHq from '../assets/images/HECHT_Poernbach.jpg'
 import {device} from "./device";
-import {color} from './color'
+import {color, color80} from './color'
 import hecht from "../assets/images/HECHT_Einladungskarte_Motiv_MA-Header.jpg";
 import styled from "styled-components";
 
@@ -15,6 +15,8 @@ export const Wrapper = styled.section`
   background-image: url(${hecht});
   background-size: cover;
   width: 100%;
+} @media${device.tablet} {
+  height: 380px;
 }
 
 `
@@ -24,7 +26,9 @@ export const MainHeaderStyle = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-}`
+}
+
+`
 
 export const Intro = styled.div`
 @media${device.desktop} {
@@ -72,7 +76,9 @@ export const List = styled.li`
 } @media${device.tablet} {
   font-size: 1.5rem;
 }
-
+  &:hover{
+    color: ${color.red}
+  }
 `
 /*start introduction incl. time and date*/
 export const IntroSectionStyle = styled.div`
@@ -86,7 +92,7 @@ export const IntroSectionStyle = styled.div`
 
 } @media${device.mobileL} {
   flex-direction: column;
-  height: 1000px;
+  height: 750px;
   padding-bottom: 0px;
 }
 `
@@ -98,7 +104,7 @@ export const WelcomeStyle = styled.div`
   overflow: visible;
   flex-grow: 1;
   width: 70%;
-  color: ${color.grey};
+  color: ${color.lightgrey};
 } @media${device.laptopL} {
   text-align: left;
   font-size: 2rem;
@@ -106,7 +112,7 @@ export const WelcomeStyle = styled.div`
   width: 60%;
   line-height: 40px;
 } @media${device.tablet} {
-  font-size: 1.3rem;
+  font-size: 1.6rem;
 } @media${device.mobileL} {
   font-size: 1.3rem;
   overflow: hidden;
@@ -197,10 +203,14 @@ export const ImageSection = styled.section`
   flex-direction: column;
   justify-content: center;
   background-image: url(${HechtStars});
-  background-size: auto;
+  background-size: contain;
 
 @media${device.tablet} {
-  display: none;
+  height: 550px;
+  background-image: none;
+
+} @media${device.mobileL} {
+  height: 350px;
 }
 `
 
@@ -214,18 +224,29 @@ export const HeadQuarter = styled.div`
 } @media${device.laptop} {
   width: 80%;
   height: 90%
+} @media${device.tablet} {
+  background-size: contain;
+  width: 100%;
+  height: 100%
 }
+
 `
 
-export const ImgTitle = styled.h3`
+export const ImgTitle = styled.h4`
 @media${device.desktop} {
-  color: red;
-  font-size: 4em;
+  color: ${color.red};
+  font-size: 2.7rem;
   font-weight: bold;
   padding-bottom: 30px;
+  width: 50%;
+  text-align: right;
 } @media${device.laptopL} {
-  font-size: 3rem;
+  font-size: 2rem;
+} @media${device.tablet} {
+  width: 100%;
+  text-align: center;
 }
+
 `
 /*End main hecht image section before footer*/
 
@@ -242,10 +263,11 @@ export const EventWrapper = styled.div`
 } @media${device.laptop} {
   height: 1400px
 } @media${device.tablet} {
-  height: 1600px
+  height: 1200px;
 } @media${device.mobileL} {
-  flex-direction: column;
-  height: 1600px;
+  height: 1500px;
+
+
 }
 
 `
@@ -262,6 +284,9 @@ export const EventInfoSection = styled.section`
 } @media${device.laptop} {
   flex-direction: column;
   height: 1200px;
+
+} @media${device.mobileL} {
+
 }
 
 `
@@ -283,8 +308,10 @@ export const OuterLeft = styled.div`
   margin: 0px;
   padding-bottom: 30px;
 } @media${device.mobileL} {
-  flex-direction: column;
-  width: 90%;
+  padding-top: 0px;
+  flex-direction: row;
+  width: 100%;
+  height: 1900px;
 }
 `
 export const OuterRight = styled.div`
@@ -302,8 +329,6 @@ export const OuterRight = styled.div`
   margin: 0px;
 
 } @media${device.mobileL} {
-  flex-wrap: nowrap;
-  z-index: 400;
 
 }
 
@@ -325,16 +350,18 @@ export const ContactBox = styled.div`
 } @media${device.mobileL} {
   width: 100%;
   height: 280px;
+  color: purple;
 }`
 
 export const AnchorStyle = styled.a`
 @media${device.desktop} {
-  color: ${color.grey};
+  color: ${color.lightgrey};
   font-size: 2.5rem;
   text-decoration: none;
 } @media${device.laptopL} {
   font-size: 2rem
 }
+  
 `
 
 export const DirectionBox = styled.div`
@@ -373,6 +400,7 @@ export const SpanStyle = styled.span`
   font-weight: bold;
   font-size: 2.5rem;
   text-transform: uppercase;
+  color: ${color.grey}
 } @media${device.laptopL} {
   font-size: 2rem;
 }
@@ -399,7 +427,7 @@ export const UlStyle = styled.ul`
 export const CovidBody = styled.p`
 @media${device.desktop} {
   font-size: 2.5rem;
-  color: ${color.grey};
+  color: ${color.lightgrey};
   width: 100%;
 } @media${device.laptopL} {
   font-size: 2rem;
@@ -426,6 +454,8 @@ export const FeedbackSection = styled.section` @media${device.desktop} {
   height: 1500px;
 } @media${device.tablet} {
   height: 1800px;
+} @media${device.mobileL} {
+  height: 1400px;
 }
 `
 
