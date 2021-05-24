@@ -10,30 +10,16 @@ import {
     OverNightBox,
     OverNightTitle,
     AnmeldeButton,
-    OverNightBody, AnmeldeInput, AnmeldeCheckbox, AnmeldeBemerkung, CheckboxLabel
+    OverNightBody, AnmeldeInput,AnmeldeInputBegleitung, AnmeldeCheckbox, AnmeldeBemerkung, CheckboxLabel
 } from "../styled";
 
 
 function Anmeldung() {
 
     const [attendees, setAttendees] = useState({Name: "", Name2: "", Bemerkung: ""})
-
-    function handleChange(e) {
-        setAttendees({name: e.target.value})
-
-    }
-
-    function handleBegleitperson() {
-        const checkBox = document.getElementById("ja2")
-        const begleitPersonFeld = document.getElementById("begleitpersonfeld")
-        if (checkBox.checked) {
-            begleitPersonFeld.className = " "
-        } else {
-            begleitPersonFeld.className = "hidden"
-        }
+ const [mitBegleitung, setMitBegleitung] = useState(false)
 
 
-    }
 
     return (
         <>
@@ -46,7 +32,7 @@ function Anmeldung() {
                     <AnmeldeCheckbox type="checkbox" id="ja1" name="allein" value="Ich komme zum Event allein"/>
                     <CheckboxLabel for="allein">Ja, ich komme allein zum Event</CheckboxLabel><br/>
                     <AnmeldeCheckbox type="checkbox" id="ja2" name="begleitperson"
-                                     value="Ich komme mit Begleitung zum Event" onClick={handleBegleitperson}/>
+                                     value="Ich komme mit Begleitung zum Event" onClick={e => setMitBegleitung(e.target.checked)}/>
                     <CheckboxLabel for="begleitperson">Ja, ich komme mit einer Begleitperson</CheckboxLabel><br/>
                     <AnmeldeCheckbox type="checkbox" id="shuttleservice" name="shuttle"
                                      value="Ich benötige einen Shuttle Service"/>
@@ -55,13 +41,14 @@ function Anmeldung() {
                                      value="Nein, ich kann leider nicht kommen!"/>
                     <CheckboxLabel for="ich komme">Nein, ich kann leider nicht kommen</CheckboxLabel><br/>
 
-                    <AnmeldeInput type="text" value={e => (e.target.value)} onChange={handleChange}
+                    <AnmeldeInput type="text" value={e => (e.target.value)}
                                   placeholder="Vor- und Zuname"/>
                     {/*<Plusicon src={PlusIcon}/>*/}
-                    <AnmeldeInput id="begleitpersonfeld" className="hidden" type="text" value={e => (e.target.value)}
-                                  onChange={handleChange}
+
+                    <AnmeldeInputBegleitung visible={mitBegleitung} id="begleitpersonfeld" type="text" value={e => (e.target.value)}
+
                                   placeholder="Vor-und Zuname der zusätzlichen Begleitperson"/>
-                    <AnmeldeBemerkung type="text" value={e => (e.target.value)} onChange={handleChange}
+                    <AnmeldeBemerkung type="text" value={e => (e.target.value)}
                                       placeholder="Bemerkung"/>
 
                     <AnmeldeButton>Abschicken</AnmeldeButton>
