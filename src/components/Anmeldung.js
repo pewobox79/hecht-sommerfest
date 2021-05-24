@@ -21,6 +21,7 @@ function Anmeldung() {
     const [absage, setAbsage] = useState()
     const [teilnehmerName, setTeilnehmerName] = useState()
     const [begleitungName, setBegleitungName] = useState()
+    const [shuttle, setShuttle] = useState()
     const [bemerkung, setBemerkung] = useState()
 
 
@@ -28,7 +29,7 @@ function Anmeldung() {
 
 function handleAnmeldung(e){
         e.preventDefault()
-    alert(absage + meldungAllein + "Name" + teilnehmerName + " " + "Begleitung: " + begleitungName + " " + "Bemerkung" +bemerkung)
+    alert(absage + meldungAllein + "Name" + teilnehmerName + " " + "Begleitung: " + begleitungName + shuttle + " " + "Bemerkung" +bemerkung)
 
     }
 
@@ -47,7 +48,7 @@ function handleAnmeldung(e){
                                      value={meldungBegleitung} onChange={e => setMeldungBegleitung(e = ("ich komme mit begleitung"))} onClick={e => setMitBegleitung(e.target.checked)}/>
                     <CheckboxLabel for="begleitperson">Ja, ich komme mit einer Begleitperson</CheckboxLabel><br/>
                     <AnmeldeCheckbox type="checkbox" id="shuttleservice" name="shuttle"
-                                     value="Ich benötige einen Shuttle Service"/>
+                                     value={shuttle} onChange={e => setShuttle(e="Ich benötige einen Shuttle Service")}/>
                     <CheckboxLabel for="shuttle">Ich habe interesse am Shuttle Service</CheckboxLabel><br/>
                     <AnmeldeCheckbox type="checkbox" id="nein" name={absage}
                                      value={absage} onChange={e=> setAbsage(e= "Nein, ich kann leider nicht kommen!")}/>
