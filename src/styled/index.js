@@ -15,6 +15,8 @@ export const Wrapper = styled.section`
   background-image: url(${hecht});
   background-size: cover;
   width: 100%;
+} @media${device.laptop} {
+  height: 500px;
 } @media${device.tablet} {
   height: 380px;
 }
@@ -76,7 +78,8 @@ export const List = styled.li`
 } @media${device.tablet} {
   font-size: 1.5rem;
 }
-  &:hover{
+
+  &:hover {
     color: ${color.red}
   }
 `
@@ -96,7 +99,6 @@ export const IntroSectionStyle = styled.div`
   padding-bottom: 0px;
 }
 `
-
 export const WelcomeStyle = styled.div`
 @media${device.desktop} {
   font-size: 2.5rem;
@@ -261,7 +263,7 @@ export const EventWrapper = styled.div`
 } @media${device.laptopL} {
   height: 900px
 } @media${device.laptop} {
-  height: 1400px
+  height: 1200px
 } @media${device.tablet} {
   height: 1200px;
 } @media${device.mobileL} {
@@ -279,6 +281,7 @@ export const EventInfoSection = styled.section`
   flex-direction: row;
   width: 100%;
   height: 100vh;
+  margin-right: 20px;
 } @media${device.laptopL} {
 
 } @media${device.laptop} {
@@ -303,6 +306,8 @@ export const OuterLeft = styled.div`
 
 } @media${device.laptopL} {
   align-items: flex-start;
+} @media${device.laptop} {
+  width: 100%;
 } @media${device.tablet} {
   width: 100%;
   margin: 0px;
@@ -324,6 +329,9 @@ export const OuterRight = styled.div`
 
 } @media${device.laptopL} {
   flex-direction: column;
+} @media${device.laptop} {
+  width: 100%;
+  margin: 20px;
 } @media${device.tablet} {
   padding-top: 20px;
   margin: 0px;
@@ -361,7 +369,7 @@ export const AnchorStyle = styled.a`
 } @media${device.laptopL} {
   font-size: 2rem
 }
-  
+
 `
 
 export const DirectionBox = styled.div`
@@ -426,11 +434,13 @@ export const UlStyle = styled.ul`
 `
 export const CovidBody = styled.p`
 @media${device.desktop} {
+  box-sizing: border-box;
   font-size: 2.5rem;
   color: ${color.lightgrey};
   width: 100%;
 } @media${device.laptopL} {
   font-size: 2rem;
+  padding-right: 20px;
 } @media${device.tablet} {
 
 } @media${device.mobileL} {
@@ -468,10 +478,14 @@ export const AnmeldungRight = styled.div`
   flex-direction: column;
   width: 50%;
   height: 50%;
+} @media${device.laptop} {
+  width: 100%;
 } @media${device.laptopL} {
   flex-direction: column;
+} @media${device.tablet} {
+  width: 100%;
+  height: 80%
 } @media${device.mobileL} {
-  margin: 20px;
 }
 `
 export const Plusicon = styled.img`

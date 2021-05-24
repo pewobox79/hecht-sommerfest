@@ -31,13 +31,13 @@ function EventDetailSection() {
                 </DirectionBox>
                 <CovidBox>
                     <DetailsTitle>Covid19-Schnellteststation</DetailsTitle>
-                    <CovidBody>Wir nehmen Ihre und unsere Gesundheit ernst! Das Betreten des Festgeländes ist nur mit einem negativen PCR Test (max. 24h alt), einem Corona-Impfnachweis oder einem Schnelltest durch das BRK vor Ort möglich.</CovidBody>
+                    <CovidBody>Wir nehmen Ihre und unsere Gesundheit ernst und lassen bei jedem Gast vor Betreten des Festgeländes einen professionellen Corona Test durch das BRK durchführen.</CovidBody>
                 </CovidBox>
             </OuterLeft>
             <OuterRight>
                 <CovidBox>
                     <DetailsTitle>Shuttleservice</DetailsTitle>
-                    <CovidBody>Jeweils um <SpanStyle>22:00, 00:00</SpanStyle> &amp; <SpanStyle>02:00 Uhr</SpanStyle> fährt unser Shuttle nach Schrobenhausen und Pfaffenhofen.</CovidBody>
+                    <CovidBody><SpanStyle>Ab 22 Uhr</SpanStyle> bieten wir Fahrten zwischen Pfaffenhofen und Pörnbach an. Bitte geben Sie in der Anmeldung an, ob Sie diesen nutzen möchten.</CovidBody>
                 </CovidBox>
 
             </OuterRight>

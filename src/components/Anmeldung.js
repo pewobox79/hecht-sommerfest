@@ -70,10 +70,8 @@ function Anmeldung() {
             <AnmeldungRight>
                 <OverNightBox><OverNightTitle>Übernachtungsempfehlung</OverNightTitle>
                     <OverNightBody><strong>Hotel Bogenrieder in
-                        Pörnbach</strong><br/>Sie möchten gern Übernachten? <br/>Wir empfehlen Ihnen das zu Fuß
-                        erreichbare Hotel Bogenrieder.</OverNightBody>
-                    <a href="https://hotel-bogenrieder.de/hotel/online-buchung/"
-                       target="_blank"><AnmeldeButton>Reservieren</AnmeldeButton></a>
+                        Pörnbach</strong><br/>Ein Kontingent von 22 Zimmer sind bis XX für Sie reserviert.</OverNightBody>
+                    <a href="tel:004984461304"><AnmeldeButton>08446 / 13 04</AnmeldeButton></a>
                 </OverNightBox>
             </AnmeldungRight>
         </>
