@@ -16,9 +16,21 @@ import {
 
 function Anmeldung() {
 
-    const [attendees, setAttendees] = useState({Name: "", Name2: "", Bemerkung: ""})
- const [mitBegleitung, setMitBegleitung] = useState(false)
+    const [meldungAllein, setMeldungAllein]= useState()
+    const [meldungBegleitung, setMeldungBegleitung]= useState()
+    const [absage, setAbsage] = useState()
+    const [teilnehmerName, setTeilnehmerName] = useState()
+    const [begleitungName, setBegleitungName] = useState()
+    const [bemerkung, setBemerkung] = useState()
 
+
+    const [mitBegleitung, setMitBegleitung] = useState(false)
+
+function handleAnmeldung(e){
+        e.preventDefault()
+    alert(absage + meldungAllein + "Name" + teilnehmerName + " " + "Begleitung: " + begleitungName + " " + "Bemerkung" +bemerkung)
+
+    }
 
 
     return (
@@ -26,32 +38,31 @@ function Anmeldung() {
 
             <OuterLeft>
                 <AnmeldeTitel>Wir bitten um Rückmeldung bis zum <TimeStyle>xx.xx.xx</TimeStyle></AnmeldeTitel>
-                <Anmeldeform action="mailto:pewobox79@gmail.com?subject=Sommerfest" enctype="text/plain">
+                <Anmeldeform  enctype="text/plain">
                     <AnmeldeLabel>Anmeldung</AnmeldeLabel>
 
-                    <AnmeldeCheckbox type="checkbox" id="ja1" name="allein" value="Ich komme zum Event allein"/>
+                    <AnmeldeCheckbox type="checkbox" id="ja1" name="allein" value={meldungAllein} onChange={e => setMeldungAllein(e = ("ich komme allein"))}/>
                     <CheckboxLabel for="allein">Ja, ich komme allein zum Event</CheckboxLabel><br/>
                     <AnmeldeCheckbox type="checkbox" id="ja2" name="begleitperson"
-                                     value="Ich komme mit Begleitung zum Event" onClick={e => setMitBegleitung(e.target.checked)}/>
+                                     value={meldungBegleitung} onChange={e => setMeldungBegleitung(e = ("ich komme mit begleitung"))} onClick={e => setMitBegleitung(e.target.checked)}/>
                     <CheckboxLabel for="begleitperson">Ja, ich komme mit einer Begleitperson</CheckboxLabel><br/>
                     <AnmeldeCheckbox type="checkbox" id="shuttleservice" name="shuttle"
                                      value="Ich benötige einen Shuttle Service"/>
                     <CheckboxLabel for="shuttle">Ich habe interesse am Shuttle Service</CheckboxLabel><br/>
-                    <AnmeldeCheckbox type="checkbox" id="nein" name="vehicle1"
-                                     value="Nein, ich kann leider nicht kommen!"/>
+                    <AnmeldeCheckbox type="checkbox" id="nein" name={absage}
+                                     value={absage} onChange={e=> setAbsage(e= "Nein, ich kann leider nicht kommen!")}/>
                     <CheckboxLabel for="ich komme">Nein, ich kann leider nicht kommen</CheckboxLabel><br/>
 
-                    <AnmeldeInput type="text" value={e => (e.target.value)}
+                    <AnmeldeInput type="text" value={teilnehmerName} onChange={e => (setTeilnehmerName(e.target.value))}
                                   placeholder="Vor- und Zuname"/>
                     {/*<Plusicon src={PlusIcon}/>*/}
 
-                    <AnmeldeInputBegleitung visible={mitBegleitung} id="begleitpersonfeld" type="text" value={e => (e.target.value)}
-
+                    <AnmeldeInputBegleitung visible={mitBegleitung} id="begleitpersonfeld" type="text" value={begleitungName} onChange={e => (setBegleitungName(e.target.value))}
                                   placeholder="Vor-und Zuname der zusätzlichen Begleitperson"/>
-                    <AnmeldeBemerkung type="text" value={e => (e.target.value)}
+                    <AnmeldeBemerkung type="text" value={bemerkung} onChange={e => (setBemerkung(e.target.value))}
                                       placeholder="Bemerkung"/>
 
-                    <AnmeldeButton>Abschicken</AnmeldeButton>
+                    <AnmeldeButton onClick={handleAnmeldung}>Abschicken</AnmeldeButton>
                 </Anmeldeform>
             </OuterLeft>
             <AnmeldungRight>
