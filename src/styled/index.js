@@ -628,6 +628,23 @@ export const AnmeldeInput = styled.input`
   width: 90%
 }
 `
+export const AnmeldeInputBegleitung = styled.input`
+@media${device.desktop} {
+  display: ${props => (props.visible ? "block" : "none")};
+  height: 40px;
+  width: 400px;
+  margin: 10px 0px 5px 0px;
+
+  &::placeholder {
+    color: ${color.grey};
+    text-transform: uppercase;
+    padding: 5px 0px 5px 20px;
+    font-size: 0.8rem
+  }
+} @media${device.mobileL} {
+  width: 90%
+}
+`
 
 export const AnmeldeBemerkung = styled.textarea`
 @media${device.desktop} {
