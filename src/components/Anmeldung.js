@@ -10,7 +10,7 @@ import {
     OverNightBox,
     OverNightTitle,
     AnmeldeButton,
-    OverNightBody, AnmeldeInput,AnmeldeInputBegleitung, AnmeldeCheckbox, AnmeldeBemerkung, CheckboxLabel
+    OverNightBody, AnmeldeInput, AnmeldeInputBegleitung, AnmeldeCheckbox, AnmeldeBemerkung, CheckboxLabel, SpanStyle
 } from "../styled";
 
 
@@ -38,7 +38,7 @@ function handleAnmeldung(e){
         <>
 
             <OuterLeft>
-                <AnmeldeTitel>Wir bitten um Rückmeldung bis zum <TimeStyle>xx.xx.xx</TimeStyle></AnmeldeTitel>
+                <AnmeldeTitel>Wir bitten um Rückmeldung bis zum <TimeStyle>04.07.2021</TimeStyle></AnmeldeTitel>
                 <Anmeldeform  enctype="text/plain">
                     <AnmeldeLabel>Anmeldung</AnmeldeLabel>
 
@@ -55,7 +55,7 @@ function handleAnmeldung(e){
                     <CheckboxLabel for="ich komme">Nein, ich kann leider nicht kommen</CheckboxLabel><br/>
 
                     <AnmeldeInput type="text" value={teilnehmerName} onChange={e => (setTeilnehmerName(e.target.value))}
-                                  placeholder="Vor- und Zuname"/>
+                                  placeholder="Vor- und Zuname" required/>
                     {/*<Plusicon src={PlusIcon}/>*/}
 
                     <AnmeldeInputBegleitung visible={mitBegleitung} id="begleitpersonfeld" type="text" value={begleitungName} onChange={e => (setBegleitungName(e.target.value))}
@@ -69,7 +69,7 @@ function handleAnmeldung(e){
             <AnmeldungRight>
                 <OverNightBox><OverNightTitle>Übernachtungsempfehlung</OverNightTitle>
                     <OverNightBody><strong>Hotel Bogenrieder in
-                        Pörnbach</strong><br/>Ein Kontingent von 22 Zimmer sind bis XX für Sie reserviert.</OverNightBody>
+                        Pörnbach</strong><br/>Ein Kontingent von 22 Zimmer sind bis zum <strong>11.7.2021</strong> für Sie reserviert.</OverNightBody>
                     <a href="tel:004984461304"><AnmeldeButton>08446 / 13 04</AnmeldeButton></a>
                 </OverNightBox>
             </AnmeldungRight>

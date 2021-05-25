@@ -5,7 +5,7 @@ function ImgSection(){
 
     return(
         <ImageSection>
-            <ImgTitle>Wir freuen uns auf Ihr kommen!</ImgTitle>
+            <ImgTitle>JETZT ABER!</ImgTitle>
             <HeadQuarter/>
         </ImageSection>
 
