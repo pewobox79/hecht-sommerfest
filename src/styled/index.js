@@ -156,13 +156,23 @@ export const Date = styled.div`
   text-align: center;
 } @media${device.laptopL} {
   font-size: 6rem;
+
 } @media${device.tablet} {
 
 } @media${device.mobileL} {
   padding-right: 30px;
   margin: 20px;
+  padding: 20px;
   font-size: 4.5rem;
-  width: 30%;
+  width: 40%;
+
+  &::after {
+    content: '.'
+  }
+
+  &:last-child::after {
+    content: ' '
+  }
 }
 `
 
@@ -181,9 +191,6 @@ export const TimeFieldStyle = styled.div`
   margin: 20px;
   width: 100%
 }
-
-
-
 `
 export const Time = styled.time`
 @media${device.desktop} {
@@ -198,6 +205,7 @@ export const Time = styled.time`
 
 /* start main hecht image section before footer */
 export const ImageSection = styled.section`
+@media${device.desktop} {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -206,8 +214,7 @@ export const ImageSection = styled.section`
   justify-content: center;
   background-image: url(${HechtStars});
   background-size: contain;
-
-@media${device.tablet} {
+} @media${device.tablet} {
   height: 550px;
   background-image: none;
 
@@ -237,13 +244,14 @@ export const HeadQuarter = styled.div`
 export const ImgTitle = styled.h4`
 @media${device.desktop} {
   color: ${color.red};
-  font-size: 2.7rem;
+  font-size: 3rem;
+  letter-spacing: 2.5px;
   font-weight: bold;
   padding-bottom: 30px;
   width: 50%;
   text-align: right;
 } @media${device.laptopL} {
-  font-size: 2rem;
+  font-size: 3rem;
 } @media${device.tablet} {
   width: 100%;
   text-align: center;
@@ -259,17 +267,15 @@ export const EventWrapper = styled.div`
   justify-content: space-around;
   flex-direction: row;
   width: 100%;
-  height: 100vh;
+  height: 1400px;
 } @media${device.laptopL} {
   height: 900px
 } @media${device.laptop} {
   height: 1200px
 } @media${device.tablet} {
-  height: 1200px;
+  height: 1400px;
 } @media${device.mobileL} {
   height: 1500px;
-
-
 }
 
 `
@@ -287,6 +293,8 @@ export const EventInfoSection = styled.section`
 } @media${device.laptop} {
   flex-direction: column;
   height: 1200px;
+
+} @media${device.tablet} {
 
 } @media${device.mobileL} {
 
@@ -355,6 +363,8 @@ export const ContactBox = styled.div`
 } @media${device.tablet} {
   width: 50%;
   font-size: 1.4rem;
+  padding: 20px;
+  height: 300px;
 } @media${device.mobileL} {
   width: 100%;
   height: 280px;
@@ -376,14 +386,13 @@ export const DirectionBox = styled.div`
 @media${device.desktop} {
   width: 50%;
   height: 50%;
-  box-sizing: border-box;
   padding: 20px;
-
+  box-sizing: border-box;
 } @media${device.tablet} {
-
+  height: 220px;
 } @media${device.mobileL} {
   width: 100%;
-  height: 50px;
+  height: 250px;
 }
 `
 export const CovidBox = styled.div`
@@ -396,8 +405,7 @@ export const CovidBox = styled.div`
   margin-bottom: 50px;
   width: 100%;
 } @media${device.mobileL} {
-  padding: 10px;
-  width: 90%;
+  padding: 20px;
   width: 90%;
 }
 
