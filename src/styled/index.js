@@ -152,7 +152,7 @@ export const Date = styled.div`
 @media${device.desktop} {
   font-size: 6.5rem;
   font-weight: bold;
-  color: red;
+  color: ${color.red};
   text-align: center;
 } @media${device.laptopL} {
   font-size: 6rem;
@@ -188,7 +188,7 @@ export const TimeFieldStyle = styled.div`
 export const Time = styled.time`
 @media${device.desktop} {
   font-size: 4rem;
-  color: red;
+  color: ${color.red};
 } @media${device.laptopL} {
   font-size: 3rem;
 }
@@ -456,7 +456,7 @@ export const FeedbackSection = styled.section` @media${device.desktop} {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: red
+  background-color: ${color.red}
 } @media${device.laptop} {
   height: 1700px;
 } @media${device.laptopL} {
