@@ -8,8 +8,6 @@ function Footer() {
             <FooterLogo>
                 <ImgStyle src={HechtLogo}/>
             </FooterLogo>
-            <LegalNote><p>®Hecht Technologie GmbH - all rights reserved</p></LegalNote>
-
         </FooterArea>
 
     )

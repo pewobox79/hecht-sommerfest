@@ -7,6 +7,7 @@ import EventDetails from "./components/EventDetails";
 import Feedback from "./components/Feedback";
 import IntroSection from "./components/IntroSection";
 import ImgSection from "./components/ImgSection";
+import CovidSection from "./components/CovidSection";
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
                 <CounterField/>
             </IntroSection>
             <EventDetails/>
+            <CovidSection/>
             <Feedback/>
             <ImgSection/>
             <Footer/>
