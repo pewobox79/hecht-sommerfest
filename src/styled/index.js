@@ -717,7 +717,9 @@ export const AnmeldeInputBegleitung = styled.input`
     color: ${color.grey};
     text-transform: uppercase;
     padding: 5px 0px 5px 20px;
-    font-size: 0.8rem
+    font-size: 0.8rem;
+    font-family: SourceSansProLight;
+    font-weight: bold;
   }
 } @media${device.mobileL} {
   width: 90%
