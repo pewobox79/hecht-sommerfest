@@ -693,6 +693,8 @@ export const AnmeldeInput = styled.input`
   height: 40px;
   width: 400px;
   margin: 10px 0px 5px 0px;
+  font-family: SourceSansProBold;
+  
 
   &::placeholder {
     color: ${color.grey};
@@ -712,6 +714,7 @@ export const AnmeldeInputBegleitung = styled.input`
   height: 40px;
   width: 400px;
   margin: 10px 0px 5px 0px;
+  font-family: SourceSansProBold;
 
   &::placeholder {
     color: ${color.grey};
@@ -731,7 +734,7 @@ export const AnmeldeBemerkung = styled.textarea`
   height: 150px;
   width: 400px;
   display: block;
-  font-family: BlinkMacSystemFont;
+  font-family: SourceSansProBold;
 
   &::placeholder {
     color: ${color.grey};
