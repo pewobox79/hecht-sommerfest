@@ -267,15 +267,18 @@ export const EventWrapper = styled.div`
   justify-content: space-around;
   flex-direction: row;
   width: 100%;
-  height: 1400px;
+  height: 50vh;
 } @media${device.laptopL} {
-  height: 900px
+
 } @media${device.laptop} {
-  height: 1200px
+  height: 700px
 } @media${device.tablet} {
-  height: 1400px;
+  height: 1000px;
+  flex-direction: column;
 } @media${device.mobileL} {
-  height: 1500px;
+  height: 1100px;
+} @media${device.mobileM} {
+  height: 1200px;
 }
 
 `
@@ -425,7 +428,7 @@ export const SpanStyle = styled.span`
 
 export const DetailsTitle = styled.h4`
 @media${device.desktop} {
-  font-size: 3.2rem;
+  font-size: 2.5rem;
   color: ${color.red};
   padding-bottom: 40px;
   text-transform: uppercase;
@@ -443,9 +446,8 @@ export const UlStyle = styled.ul`
 export const CovidBody = styled.p`
 @media${device.desktop} {
   box-sizing: border-box;
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: ${color.lightgrey};
-  width: 100%;
 } @media${device.laptopL} {
   font-size: 2rem;
   padding-right: 20px;
@@ -707,22 +709,91 @@ export const Input = styled.input`width: 350px;
   outline: none; `
 
 
+/*updated contact direction and shuttle field*/
+
+export const ContactField = styled.div`
+@media${device.desktop} {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex-grow: 2;
+  padding: 30px 90px 30px 30px;
+  box-sizing: border-box;
+
+} @media${device.mobileM} {
+  padding: 30px 10px 30px 20px;
+}`
+
+export const DirectionField = styled.div`
+@media${device.desktop} {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 2;
+  height: 100%;
+  padding: 30px 90px 30px 30px;
+  box-sizing: border-box;
+
+} @media${device.mobileM} {
+  padding: 30px 10px 30px 20px;
+}`
+
+export const ShuttleField = styled.div`
+@media${device.desktop} {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 3;
+  height: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+
+} @media${device.mobileM} {
+  padding: 30px 10px 30px 20px;
+}`
+
+export const CovidTestField = styled.div`
+@media${device.desktop} {
+  height: 50vh;
+  width: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+} @media${device.laptopL} {
+  height: 600px;
+} @media${device.tablet} {
+  height: 700px;
+} @media${device.mobileL} {
+  height: 700px;
+} @media${device.mobileM} {
+  height: 800px;
+  padding: 30px 10px 30px 20px;
+}
+`
+
+
+/* /updated contact direction and shuttle field*/
+
 /*start FOOTER section*/
 export const FooterArea = styled.footer`
+@media${device.desktop} {
   display: flex;
   align-items: center;
   width: 100%;
   min-height: 30vh;
   background-image: url(${HechtFooter});
+  background-size: contain;
+  background-repeat: no-repeat;
+} @media${device.tablet} {
+  min-height: 140px;
+} @media${device.mobileL} {
+  min-height: 200px;
   background-size: cover;
+}
 
 
 `
-
 export const FooterLogo = styled.div`
+@media${device.desktop} {
   padding-left: 50px;
-
-@media${device.tablet} {
+} @media${device.tablet} {
   justify-content: center;
 }
 
@@ -732,13 +803,10 @@ export const ImgStyle = styled.img`
 @media${device.desktop} {
   height: 100px;
 } @media${device.tablet} {
-  height: 50px;
+  height: 80px;
   margin: auto;
+} @media${device.mobileM} {
+  height: 60px;
 }
 `
-export const LegalNote = styled.div`
-  font-size: 0.5rem;
-  text-align: center;
-  color: white`
-
 
