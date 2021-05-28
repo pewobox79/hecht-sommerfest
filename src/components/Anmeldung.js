@@ -10,7 +10,7 @@ import {
     OverNightBox,
     OverNightTitle,
     AnmeldeButton,
-    OverNightBody, AnmeldeInput, AnmeldeInputBegleitung, AnmeldeCheckbox, AnmeldeBemerkung, CheckboxLabel, SpanStyle
+    OverNightBody, AnmeldeInput, AnmeldeInputBegleitung, AnmeldeCheckbox, AnmeldeBemerkung, CheckboxLabel
 } from "../styled";
 
 
@@ -69,7 +69,7 @@ function handleAnmeldung(e){
             <AnmeldungRight>
                 <OverNightBox><OverNightTitle>Übernachtungsempfehlung</OverNightTitle>
                     <OverNightBody><strong>Hotel Bogenrieder in
-                        Pörnbach</strong><br/>Ein Kontingent von 22 Zimmer sind bis zum <strong>11.7.2021</strong> für Sie reserviert.</OverNightBody>
+                        Pörnbach</strong><br/>Ein Kontingent von 22 Zimmer ist bis zum <strong>11.7.2021</strong> für Sie reserviert.</OverNightBody>
                     <a href="tel:004984461304"><AnmeldeButton>08446 / 13 04</AnmeldeButton></a>
                 </OverNightBox>
             </AnmeldungRight>

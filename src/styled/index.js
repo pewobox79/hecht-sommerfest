@@ -19,6 +19,8 @@ export const Wrapper = styled.section`
   height: 500px;
 } @media${device.tablet} {
   height: 380px;
+} @media${device.mobileL} {
+
 }
 
 `
@@ -45,6 +47,7 @@ export const Intro = styled.div`
 export const Title = styled.h1`
 @media${device.desktop} {
   font-size: 5rem;
+  font-family: SourceSansProBold;
   color: white;
   text-transform: uppercase;
   font-weight: bolder;
@@ -73,6 +76,7 @@ export const List = styled.li`
   float: left;
   font-size: 2rem;
   font-weight: bold;
+  font-family: SourceSansProBold;
 } @media${device.laptopL} {
   font-size: 1.5rem;
 } @media${device.tablet} {
@@ -97,16 +101,24 @@ export const IntroSectionStyle = styled.div`
   flex-direction: column;
   height: 750px;
   padding-bottom: 0px;
+} @media${device.tablet} {
+
+} @media${device.mobileL} {
+  height: 550px;
+} @media${device.mobileM} {
+  height: 600px
 }
 `
 export const WelcomeStyle = styled.div`
 @media${device.desktop} {
   font-size: 2.5rem;
+  font-weight: normal;
+  font-family: SourceSansProLight;
   margin: 30px;
   overflow: visible;
   flex-grow: 1;
   width: 70%;
-  color: ${color.lightgrey};
+  color: ${color.grey};
 } @media${device.laptopL} {
   text-align: left;
   font-size: 2rem;
@@ -132,6 +144,8 @@ export const CounterFieldStyle = styled.div`
 
 } @media${device.mobileL} {
   flex-direction: column;
+} @media${device.mobileM} {
+  background-color: purple;
 }
 `
 export const DateFieldStyle = styled.div`
@@ -140,18 +154,22 @@ export const DateFieldStyle = styled.div`
   text-align: center;
   display: flex;
   flex-direction: column;
-
 } @media${device.tablet} {
 
 } @media${device.mobileL} {
   flex-direction: row;
-  margin-left: 20px;
+  margin-left: 0px;
+} @media${device.mobileM} {
+  width: 100%;
+  margin: 0px;
+
 }
 `
 export const Date = styled.div`
 @media${device.desktop} {
   font-size: 6.5rem;
   font-weight: bold;
+  font-family: SourceSansProBold;
   color: ${color.red};
   text-align: center;
 } @media${device.laptopL} {
@@ -160,18 +178,23 @@ export const Date = styled.div`
 } @media${device.tablet} {
 
 } @media${device.mobileL} {
-  padding-right: 30px;
-  margin: 20px;
-  padding: 20px;
+  padding: 10px;
   font-size: 4.5rem;
-  width: 40%;
 
   &::after {
-    content: '.'
+    content: '/'
   }
 
   &:last-child::after {
     content: ' '
+  }
+} @media${device.mobileM} {
+  padding: 0px;
+  margin: 0px;
+  width: 30%;
+
+  &:first-child {
+    padding-left: 20px;
   }
 }
 `
@@ -188,16 +211,24 @@ export const TimeFieldStyle = styled.div`
 } @media${device.mobileL} {
   justify-content: normal;
   align-items: flex-start;
-  margin: 20px;
-  width: 100%
+  padding-left: 20px;
+  width: 100%;
+} @media${device.mobileM} {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+
 }
 `
 export const Time = styled.time`
 @media${device.desktop} {
   font-size: 4rem;
+  font-family: SourceSansProBold;
   color: ${color.red};
 } @media${device.laptopL} {
   font-size: 3rem;
+} @media${device.mobileM} {
+  padding-left: 20px;
 }
 
 `
@@ -247,6 +278,7 @@ export const ImgTitle = styled.h4`
   font-size: 3rem;
   letter-spacing: 2.5px;
   font-weight: bold;
+  font-family: SourceSansProBold;
   padding-bottom: 30px;
   width: 50%;
   text-align: right;
@@ -276,9 +308,11 @@ export const EventWrapper = styled.div`
   height: 1000px;
   flex-direction: column;
 } @media${device.mobileL} {
-  height: 1100px;
+  height: 900px;
+  padding-top: 30px;
 } @media${device.mobileM} {
-  height: 1200px;
+  height: 900px;
+  background-color: green;
 }
 
 `
@@ -376,8 +410,9 @@ export const ContactBox = styled.div`
 
 export const AnchorStyle = styled.a`
 @media${device.desktop} {
-  color: ${color.lightgrey};
-  font-size: 2.5rem;
+  color: ${color.grey};
+  font-size: 2rem;
+  font-family: SourceSansProLight;
   text-decoration: none;
 } @media${device.laptopL} {
   font-size: 2rem
@@ -417,6 +452,7 @@ export const CovidBox = styled.div`
 export const SpanStyle = styled.span`
 @media${device.desktop} {
   font-weight: bold;
+  font-family: SourceSansProBold;
   font-size: 2.5rem;
   text-transform: uppercase;
   color: ${color.grey}
@@ -429,6 +465,7 @@ export const SpanStyle = styled.span`
 export const DetailsTitle = styled.h4`
 @media${device.desktop} {
   font-size: 2.5rem;
+  font-family: SourceSansProBold;
   color: ${color.red};
   padding-bottom: 40px;
   text-transform: uppercase;
@@ -447,7 +484,10 @@ export const CovidBody = styled.p`
 @media${device.desktop} {
   box-sizing: border-box;
   font-size: 2rem;
-  color: ${color.lightgrey};
+  font-family: SourceSansProLight;
+  color: ${color.grey};
+  padding-right: 20px;
+  width: 130%;
 } @media${device.laptopL} {
   font-size: 2rem;
   padding-right: 20px;
@@ -455,6 +495,25 @@ export const CovidBody = styled.p`
 
 } @media${device.mobileL} {
   font-size: 1.3rem
+}
+`
+
+export const ShuttleBody = styled.p`
+@media${device.desktop} {
+  box-sizing: border-box;
+  font-size: 2rem;
+  font-family: SourceSansProLight;
+  color: ${color.grey};
+  padding-right: 20px;
+  width: 80%;
+} @media${device.laptopL} {
+  font-size: 2rem;
+  padding-right: 20px;
+} @media${device.tablet} {
+
+} @media${device.mobileL} {
+  font-size: 2rem;
+  width: 100%;
 }
 `
 /*Anmeldesection*/
@@ -473,7 +532,7 @@ export const FeedbackSection = styled.section` @media${device.desktop} {
   flex-direction: column;
   height: 1500px;
 } @media${device.tablet} {
-  height: 1800px;
+  height: 1500px;
 } @media${device.mobileL} {
   height: 1400px;
 }
@@ -488,6 +547,8 @@ export const AnmeldungRight = styled.div`
   flex-direction: column;
   width: 50%;
   height: 50%;
+  box-sizing: border-box;
+  padding-right: 30px;
 } @media${device.laptop} {
   width: 100%;
 } @media${device.laptopL} {
@@ -513,6 +574,7 @@ export const OverNightTitle = styled.h4`
 @media${device.desktop} {
   font-size: 2.5rem;
   font-weight: bold;
+  font-family: SourceSansProBold;
   color: white;
   text-transform: uppercase;
 } @media${device.laptopL} {
@@ -527,7 +589,8 @@ export const AnmeldeTitel = styled.h3`
   color: white;
   font-size: 3rem;
   font-weight: bold;
-  margin: 40px
+  margin: 40px;
+  font-family: SourceSansProBold;
 
 } @media${device.laptopL} {
   font-size: 4rem;
@@ -543,6 +606,7 @@ export const TimeStyle = styled.span`
   font-weight: bold;
   text-transform: uppercase;
   color: ${color.grey};
+  font-family: SourceSansProBold;
 } @media${device.laptopL} {
   font-size: 4rem;
 } @media${device.mobileL} {
@@ -564,10 +628,11 @@ export const OverNightBox = styled.div`
 }`
 
 export const OverNightBody = styled.p`
-
 @media${device.desktop} {
   font-size: 2rem;
+  font-family: SourceSansProLight;
   color: ${color.grey};
+  width: 80%;
 } @media${device.laptopL} {
   font-size: 1.6rem;
 } @media${device.mobileL} {
@@ -609,7 +674,8 @@ export const CheckboxLabel = styled.label`
   font-size: 1.5rem;
   font-weight: bold;
   vert-align: middle;
-  color: ${color.grey}
+  color: ${color.grey};
+  font-family: SourceSansProLight;
 } @media${device.mobileL} {
   font-size: 1rem;
 
@@ -632,7 +698,9 @@ export const AnmeldeInput = styled.input`
     color: ${color.grey};
     text-transform: uppercase;
     padding: 5px 0px 5px 20px;
-    font-size: 0.8rem
+    font-size: 0.8rem;
+    font-weight: bold;
+    font-family: SourceSansProLight;
   }
 } @media${device.mobileL} {
   width: 90%
@@ -667,7 +735,9 @@ export const AnmeldeBemerkung = styled.textarea`
     color: ${color.grey};
     text-transform: uppercase;
     padding: 5px 0px 5px 20px;
-    font-size: 0.8rem
+    font-size: 0.8rem;
+    font-family: SourceSansProLight;
+    font-weight: bold;
   }
 } @media${device.mobileL} {
   width: 90%
@@ -686,6 +756,7 @@ export const AnmeldeButton = styled.button`
   font-weight: bold;
   transition: 0.5s ease-out;
   margin-top: 40px;
+  font-family: SourceSansProBold;
 
   &:hover {
     background-color: white;
@@ -716,9 +787,9 @@ export const ContactField = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
-  flex-grow: 2;
   padding: 30px 90px 30px 30px;
   box-sizing: border-box;
+  flex-grow: 1;
 
 } @media${device.mobileM} {
   padding: 30px 10px 30px 20px;
@@ -728,7 +799,7 @@ export const DirectionField = styled.div`
 @media${device.desktop} {
   display: flex;
   flex-direction: column;
-  flex-grow: 2;
+  flex-grow: 1;
   height: 100%;
   padding: 30px 90px 30px 30px;
   box-sizing: border-box;
@@ -741,10 +812,11 @@ export const ShuttleField = styled.div`
 @media${device.desktop} {
   display: flex;
   flex-direction: column;
-  flex-grow: 3;
+  flex-grow: 4;
   height: 100%;
   padding: 30px;
   box-sizing: border-box;
+
 
 } @media${device.mobileM} {
   padding: 30px 10px 30px 20px;
@@ -762,8 +834,10 @@ export const CovidTestField = styled.div`
   height: 700px;
 } @media${device.mobileL} {
   height: 700px;
+  font-size: 2rem;
+  width: 100%
 } @media${device.mobileM} {
-  height: 800px;
+  height: 700px;
   padding: 30px 10px 30px 20px;
 }
 `

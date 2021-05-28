@@ -14,7 +14,7 @@ function CovidSection() {
                 Bitte Identitätsnachweis mitführen! <br/>
                 Mögliche Teststationen finden Sie <AnchorStyle
                     href="https://www.landkreis-pfaffenhofen.de/landratsamt/informationen-und-aktuelle-meldungen-zum-coronavirus/testmoeglichkeiten/"
-                    target="_blank"><strong>HIER</strong></AnchorStyle></CovidBody>
+                    target="_blank"><SpanStyle>HIER</SpanStyle></AnchorStyle></CovidBody>
         </CovidTestField>
     )
 }

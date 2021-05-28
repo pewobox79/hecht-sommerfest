@@ -8,7 +8,7 @@ import {
     DetailsTitle,
     DirectionField,
     EventWrapper,
-    ShuttleField, SpanStyle
+    ShuttleField, SpanStyle, ShuttleBody
 } from "../styled";
 
 
@@ -33,9 +33,9 @@ function EventDetails() {
             </DirectionField>
             <ShuttleField>
                 <DetailsTitle>Shuttleservice</DetailsTitle>
-                <CovidBody><SpanStyle>Ab 22 Uhr</SpanStyle> bieten wir einen Shuttle von Pörnbach nach Pfaffenhofen
+                <ShuttleBody><SpanStyle>Ab 22 Uhr</SpanStyle> bieten wir einen Shuttle von Pörnbach nach Pfaffenhofen
                     und Schrobenhausen an. Bitte geben Sie uns bei Ihrer Anmeldung Bescheid, wenn Sie diesen nutzen
-                    möchten.</CovidBody>
+                    möchten.</ShuttleBody>
             </ShuttleField>
         </EventWrapper>
     )
