@@ -1,4 +1,5 @@
 import React from "react";
+import Shuttle from "./Shuttle";
 import {
     EventInfoSection,
     OuterLeft,
@@ -48,13 +49,7 @@ function EventDetailSection() {
                 </CovidBox>
             </OuterLeft>
             <OuterRight>
-                <CovidBox>
-                    <DetailsTitle>Shuttleservice</DetailsTitle>
-                    <CovidBody><SpanStyle>Ab 22 Uhr</SpanStyle> bieten wir einen Shuttle von Pörnbach nach Pfaffenhofen
-                        und Schrobenhausen an. Bitte geben Sie uns bei Ihrer Anmeldung Bescheid, wenn Sie diesen nutzen
-                        möchten.</CovidBody>
-                </CovidBox>
-
+                <Shuttle/>
             </OuterRight>
         </EventInfoSection>
     )
