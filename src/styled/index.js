@@ -858,7 +858,7 @@ export const CovidTestField = styled.div`
   font-size: 2rem;
   width: 100%;
 } @media${device.mobileM} {
-  height: 1000px;
+  height: 1200px;
   padding: 100px 10px 30px 20px;
 }
 `
