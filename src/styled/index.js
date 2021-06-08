@@ -519,6 +519,25 @@ export const ShuttleBody = styled.p`
   width: 100%;
 }
 `
+
+export const CovidContent = styled.p`
+@media${device.desktop} {
+  box-sizing: border-box;
+  font-size: 2rem;
+  font-family: SourceSansProLight;
+  color: ${color.grey};
+  padding-right: 20px;
+  width: 80%;
+} @media${device.laptopL} {
+  font-size: 2rem;
+  padding-right: 20px;
+} @media${device.tablet} {
+
+} @media${device.mobileL} {
+  font-size: 2rem;
+  width: 100%;
+}
+`
 /*Anmeldesection*/
 
 export const FeedbackSection = styled.section`
@@ -837,10 +856,10 @@ export const CovidTestField = styled.div`
 } @media${device.mobileL} {
   height: 700px;
   font-size: 2rem;
-  width: 100%
+  width: 100%;
 } @media${device.mobileM} {
-  height: 700px;
-  padding: 30px 10px 30px 20px;
+  height: 1000px;
+  padding: 100px 10px 30px 20px;
 }
 `
 

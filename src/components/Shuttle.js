@@ -1,14 +1,14 @@
 import React from "react";
-import {CovidBody, CovidBox, DetailsTitle, OuterRight, SpanStyle} from "../styled";
+import {ShuttleField, DetailsTitle, OuterRight, SpanStyle, ShuttleBody} from "../styled";
 
 function Shuttle(){
     return(
-            <CovidBox>
+        <ShuttleField>
                 <DetailsTitle>Shuttleservice</DetailsTitle>
-                <CovidBody><SpanStyle>Ab 22 Uhr</SpanStyle> bieten wir einen Shuttle von Pörnbach nach Pfaffenhofen
+            <ShuttleBody><SpanStyle>Um 22:30, 00.30 Uhr</SpanStyle> und <SpanStyle>02:30 Uhr</SpanStyle> bieten wir einen Shuttle zwischen Pörnbach, Pfaffenhofen
                     und Schrobenhausen an. Bitte geben Sie uns bei Ihrer Anmeldung Bescheid, wenn Sie diesen nutzen
-                    möchten.</CovidBody>
-            </CovidBox>
+                    möchten.</ShuttleBody>
+        </ShuttleField>
 
     )
 }
