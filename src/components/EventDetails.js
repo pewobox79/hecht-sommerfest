@@ -8,6 +8,7 @@ import {
     EventWrapper,
     ShuttleField, SpanStyle, ShuttleBody
 } from "../styled";
+import Shuttle from "./Shuttle";
 
 
 function EventDetails() {
@@ -29,12 +30,7 @@ function EventDetails() {
                     title="HECHT Technologie Pörnbach Google Maps Navigation" target="_blank">Am Anger 13<br/>85309
                     Pörnbach</AnchorStyle></CovidBody>
             </DirectionField>
-            <ShuttleField>
-                <DetailsTitle>Shuttleservice</DetailsTitle>
-                <ShuttleBody><SpanStyle>Ab 22 Uhr</SpanStyle> bieten wir einen Shuttle von Pörnbach nach Pfaffenhofen
-                    und Schrobenhausen an. Bitte geben Sie uns bei Ihrer Anmeldung Bescheid, wenn Sie diesen nutzen
-                    möchten.</ShuttleBody>
-            </ShuttleField>
+            <Shuttle/>
         </EventWrapper>
     )
 }
