@@ -4,6 +4,8 @@ import HechtHq from '../assets/images/HECHT_Poernbach.jpg'
 import {device} from "./device";
 import {color, color80} from './color'
 import hecht from "../assets/images/HECHT_Einladungskarte_Motiv_MA-Header.jpg";
+import stripes from "../assets/images/HECHT_Einladungskarte_HG_rot-2.png"
+import stars from "../assets/images/HECHT_Einladungskarte_HG_weiß-2.png"
 import styled from "styled-components";
 
 
@@ -300,6 +302,7 @@ export const EventWrapper = styled.div`
   flex-direction: row;
   width: 100%;
   height: 50vh;
+
 } @media${device.laptopL} {
 
 } @media${device.laptop} {
@@ -312,7 +315,7 @@ export const EventWrapper = styled.div`
   padding-top: 30px;
 } @media${device.mobileM} {
   height: 900px;
-  background-color: green;
+
 }
 
 `
@@ -370,7 +373,7 @@ export const OuterRight = styled.div`
   flex-direction: row;
   width: 50%;
   height: 100%;
-  margin: 30px
+  margin: 30px;
 
 } @media${device.laptopL} {
   flex-direction: column;
@@ -518,14 +521,17 @@ export const ShuttleBody = styled.p`
 `
 /*Anmeldesection*/
 
-export const FeedbackSection = styled.section` @media${device.desktop} {
+export const FeedbackSection = styled.section`
+@media${device.desktop} {
   width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: ${color.red}
+  background-color: ${color.red};
+  background-image: url(${stripes});
+  background-size: contain;
 } @media${device.laptop} {
   height: 1700px;
 } @media${device.laptopL} {
@@ -558,15 +564,6 @@ export const AnmeldungRight = styled.div`
   height: 80%
 } @media${device.mobileL} {
 }
-`
-export const Plusicon = styled.img`
-@media${device.desktop} {
-  height: 30px;
-  display: inline-block;
-  margin: 23px 0px 0px 10px
-
-}
-
 `
 
 
@@ -694,7 +691,7 @@ export const AnmeldeInput = styled.input`
   width: 400px;
   margin: 10px 0px 5px 0px;
   font-family: SourceSansProBold;
-  
+
 
   &::placeholder {
     color: ${color.grey};
