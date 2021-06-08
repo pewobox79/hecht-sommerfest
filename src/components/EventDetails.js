@@ -1,10 +1,8 @@
 import React from "react";
-import EventDetailSection from './EventDetailSection'
 import {
     AnchorStyle,
     ContactField,
     CovidBody,
-    CovidTestField,
     DetailsTitle,
     DirectionField,
     EventWrapper,
