@@ -315,7 +315,6 @@ export const EventWrapper = styled.div`
   padding-top: 30px;
 } @media${device.mobileM} {
   height: 900px;
-
 }
 
 `
@@ -527,7 +526,7 @@ export const CovidContent = styled.p`
   font-family: SourceSansProLight;
   color: ${color.grey};
   padding-right: 20px;
-  width: 80%;
+  width: 100%;
 } @media${device.laptopL} {
   font-size: 2rem;
   padding-right: 20px;
@@ -862,7 +861,10 @@ export const CovidTestField = styled.div`
   padding: 100px 10px 30px 20px;
 }
 `
-
+export const Klammertext = styled.span`
+@media${device.desktop}{
+  font-size: 1.5rem
+}`
 
 /* /updated contact direction and shuttle field*/
 
