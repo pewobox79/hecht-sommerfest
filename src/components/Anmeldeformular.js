@@ -71,7 +71,7 @@ function Anmeldeformular() {
     return (
         <>
 
-            <AnmeldeTitel>Wir bitten um Rückmeldung bis zum <TimeStyle>04.07.2021</TimeStyle></AnmeldeTitel>
+            <AnmeldeTitel>Wir bitten um Rückmeldung bis zum <TimeStyle>14.07.2021</TimeStyle></AnmeldeTitel>
             <Anmeldeform onSubmit={sendMail} method="post" enctype="text/plain">
                 <AnmeldeLabel>Anmeldung</AnmeldeLabel>
 
