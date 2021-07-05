@@ -335,7 +335,7 @@ export const EventInfoSection = styled.section`
 
 } @media${device.tablet} {
 
-} @media${device.mobileL} {
+} @media${device.mobileM} {
 
 }
 
@@ -853,7 +853,8 @@ export const CovidTestField = styled.div`
 } @media${device.tablet} {
   height: 700px;
 } @media${device.mobileL} {
-  height: 700px;
+  height: 1000px;
+  padding-top: 80px;
   font-size: 2rem;
   width: 100%;
 } @media${device.mobileM} {
