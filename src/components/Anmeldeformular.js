@@ -62,7 +62,7 @@ function Anmeldeformular() {
             Cc: 'julien.lobo.13@gmail.com',
             From: "pewobox79@gmail.com",
             Subject: `Sommerfest Rückmeldung`,
-            Body: `Hallo - ich ${teilnehmerName} ${meldungAllein} ${meldungBegleitung} ${begleitungName}. ${shuttle}. Sonstige Info: ${bemerkung}`
+            Body: `Hallo - ich ${teilnehmerName} ${meldungAllein}. ${shuttle}. Sonstige Info: ${bemerkung}`
         }).then(
             message => alert("Ihre Rückmeldung zum Sommerfest wurde an Yessica Wolf verschickt.")
         );
@@ -76,13 +76,13 @@ function Anmeldeformular() {
                 <AnmeldeLabel>Anmeldung</AnmeldeLabel>
 
                 <AnmeldeCheckbox type="checkbox" id="ja1" name="allein" value={meldungAllein}
-                                 onChange={e => setMeldungAllein(e = ("komme allein"))}/>
-                <CheckboxLabel htmlFor="allein">Ja, ich komme allein zum Event</CheckboxLabel><br/>
-                <AnmeldeCheckbox type="checkbox" id="ja2" name="begleitperson"
-                                 value={meldungBegleitung}
-                                 onChange={e => setMeldungBegleitung(e = ("mit begleitung kommen"))}
-                                 onClick={e => setMitBegleitung(e.target.checked)}/>
-                <CheckboxLabel htmlFor="begleitperson">Ja, ich komme mit einer Begleitperson</CheckboxLabel><br/>
+                                 onChange={e => setMeldungAllein(e = ("komme zum Sommerfest"))}/>
+                <CheckboxLabel htmlFor="allein">Ja, ich komme zum Sommerfest</CheckboxLabel><br/>
+                {/*<AnmeldeCheckbox type="checkbox" id="ja2" name="begleitperson"*/}
+                {/*                 value={meldungBegleitung}*/}
+                {/*                 onChange={e => setMeldungBegleitung(e = ("mit begleitung kommen"))}*/}
+                {/*                 onClick={e => setMitBegleitung(e.target.checked)}/>*/}
+                {/*<CheckboxLabel htmlFor="begleitperson">Ja, ich komme mit einer Begleitperson</CheckboxLabel><br/>*/}
                 <AnmeldeCheckbox type="checkbox" id="shuttleservice" name="shuttle"
                                  value={shuttle} onChange={e => setShuttle(e = " Ich benötige einen Shuttle Service")}/>
                 <CheckboxLabel htmlFor="shuttle">Ich habe interesse am Shuttle Service</CheckboxLabel><br/>
@@ -93,7 +93,6 @@ function Anmeldeformular() {
                 <AnmeldeInput type="text" value={teilnehmerName} onChange={e => (setTeilnehmerName(e.target.value))}
                               placeholder="Vor- und Zuname" required/>
                 {/*<Plusicon src={PlusIcon}/>*/}
-
                 <AnmeldeInputBegleitung visible={mitBegleitung} id="begleitpersonfeld" type="text"
                                         value={begleitungName} onChange={e => (setBegleitungName(e.target.value))}
                                         placeholder="Vor-und Zuname der zusätzlichen Begleitperson"/>
