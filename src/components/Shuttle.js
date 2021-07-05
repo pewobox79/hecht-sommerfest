@@ -6,8 +6,8 @@ function Shuttle(){
         <ShuttleField>
                 <DetailsTitle>Shuttleservice</DetailsTitle>
             <ShuttleBody><SpanStyle>Um 22:30, 00.30 Uhr</SpanStyle> und <SpanStyle>02:30 Uhr</SpanStyle> bieten wir einen Shuttle zwischen Pörnbach, Pfaffenhofen
-                    und Schrobenhausen an. Bitte geben Sie uns bei Ihrer Anmeldung Bescheid, wenn Sie diesen nutzen
-                    möchten.</ShuttleBody>
+                    und Schrobenhausen an. Bitte gib uns bei Deiner Anmeldung Bescheid, wenn Du diesen Service nutzen
+                    möchtest.</ShuttleBody>
         </ShuttleField>
 
     )

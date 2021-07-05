@@ -9,7 +9,7 @@ function TimeField() {
     return (
 
         <TimeFieldStyle>
-            <Time>18:30 Uhr</Time>
+            <Time>18:00 Uhr</Time>
         </TimeFieldStyle>
     )
 }
