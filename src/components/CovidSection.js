@@ -10,7 +10,7 @@ function CovidSection() {
                 <SpanStyle>Geimpft</SpanStyle> <Klammertext>( Geimpfte müssen am Tag der Veranstaltung ihren Nachweis mit sich führen.)</Klammertext><br/>
                 <SpanStyle>Getestet</SpanStyle> <Klammertext>(Vorlage eines PCR Test, höchstens 48h alt oder eines
                     Antigentest, höchtens 24h alt)</Klammertext><br/>
-                Mögliche Teststationen finden Sie <AnchorStyle
+                Mögliche Teststationen findest Du hier <AnchorStyle
                     href="https://www.landkreis-pfaffenhofen.de/landratsamt/informationen-und-aktuelle-meldungen-zum-coronavirus/testmoeglichkeiten/"
                     target="_blank"><SpanStyle>HIER</SpanStyle></AnchorStyle></CovidContent>
         </CovidTestField>
