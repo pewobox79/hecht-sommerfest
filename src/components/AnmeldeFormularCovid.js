@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import {
     AnmeldeLabel,
     AnmeldeTitel,
@@ -9,11 +9,34 @@ import {
     AnmeldeInput,
     Anmeldeform,
     AnmeldeButton,
-    CovidDatum, CovidSelect
+    CovidDatum, CovidSelect, AnmeldeName
 } from "../styled";
 
 function AnmeldeFormularCovid() {
 
+    //toggle features
+    function zusage() {
+        if (document.getElementById('ja').checked) {
+            document.getElementById('covid').style.display = 'block';
+            document.getElementById('covid').style.float = 'left';
+            document.getElementById('covidDatum').style.display = 'block';
+        } else {
+            document.getElementById('covid').style.display = 'none';
+            document.getElementById('covidDatum').style.display = 'none';
+        }
+
+    }
+
+    function shuttleFeedback() {
+        if (document.getElementById('shuttle').checked) {
+            document.getElementById('wunschort').style.display = 'block';
+        } else {
+            document.getElementById('wunschort').style.display = 'none';
+        }
+
+    }
+
+//email handling
     const Email = {
         send: function (a) {
             return new Promise(function (n, e) {
@@ -49,27 +72,32 @@ function AnmeldeFormularCovid() {
     function sendMail(e) {
         e.preventDefault()
         let anmeldung = {
-            antwort: document.getElementById("antwort").value,
+            antwort: {
+                ja: document.getElementById("ja").value,
+                nein: document.getElementById("nein").value,
+            },
             name: document.getElementById("name").value,
             covid: {
                 status: document.getElementById("covid").value,
                 covidDatum: document.getElementById("covidDatum").value
             },
             shuttle: {
-                wahl: document.getElementById("shuttle").value,
+                wahl: document.getElementById("shuttle").value = "kein interesse",
                 wunschort: document.getElementById("wunschort").value
             },
             bemerkung: document.getElementById("bemerkung").value
 
         }
-        console.log(anmeldung)
+        alert(Object.entries(JSON().stringify(anmeldung)))
+
         if (anmeldung)
             Email.send({
                 SecureToken: "bc61b703-5e46-49b7-ad19-be1847cf6673",
                 To: 'y.wolf@hecht.eu',
+                CC: 'julien.lobo.13@gmail.com',
                 From: "pewobox79@gmail.com",
                 Subject: `Sommerfest Rückmeldung`,
-                Body: `Neu Anmeldung von <strong>${anmeldung.name}</strong>. ${anmeldung.antwort}, CovidStatus: ${anmeldung.covid.status} Datum: ${anmeldung.covid.covidDatum}, Shuttle: ${anmeldung.shuttle.wahl}  Wusnchort: ${anmeldung.shuttle.wunschort}`
+                Body: `Neu Anmeldung von <strong>${anmeldung.name}</strong>. Teilnahme Rückmeldung: ${anmeldung.antwort.ja} ${anmeldung.antwort.nein}, CovidStatus: ${anmeldung.covid.status} Datum: ${anmeldung.covid.covidDatum}, Shuttle: ${anmeldung.shuttle.wahl}  Wusnchort: ${anmeldung.shuttle.wunschort}`
             }).then(
                 message => alert("Ihre Rückmeldung zum Sommerfest wurde an Yessica Wolf verschickt.")
             );
@@ -82,28 +110,29 @@ function AnmeldeFormularCovid() {
 
             <Anmeldeform onSubmit={sendMail} method="post" enctype="text/plain">
                 <AnmeldeLabel>Anmeldung</AnmeldeLabel>
-                <AnmeldeInput id="name" name="name" type="text" placeholder="Vorname, Name"/><br/>
-                <AnmeldeCheckbox type="checkbox" id="antwort" name="ja" value="Ja, ich komme zum Sommerfest"/>
+                <AnmeldeName id="name" name="name" type="text" placeholder="Vorname, Name" required/><br/>
+                <AnmeldeCheckbox onChange={zusage} type="checkbox" id="ja" name="ja"
+                                 value="Ja, ich komme zum Sommerfest"/>
                 <CheckboxLabel htmlFor="ja">Ja, ich komme zum Sommerfest</CheckboxLabel><br/>
-                <CheckboxLabel htmlFor="covid">
-                    Ich bin
                     <CovidSelect id="covid" name="covid">
-                        <option>Wählen</option>
-                        <option value="genesen">Genesen</option>
-                        <option value="geimpft">Geimpft (2.Impfung)</option>
+                        <option>Ich bin</option>
+                        <option value="genesen">bin genesen</option>
+                        <option value="geimpft">bin geimpft (2.Impfung)</option>
+                        <option value="geimpft">gehe zum testen</option>
                     </CovidSelect>
                     <CovidDatum type="text" id="covidDatum" placeholder="Datum"/>
-                </CheckboxLabel><br/>
-                <AnmeldeCheckbox type="checkbox" id="shuttle" name="shuttle"
+                <br/>
+                <AnmeldeCheckbox onChange={shuttleFeedback} type="checkbox" id="shuttle" name="shuttle"
                                  value="Ich habe interesse am Shuttle Service"/>
-                <CheckboxLabel htmlFor="shuttle">Ich habe interesse am Shuttle Service nach </CheckboxLabel>
+                <CheckboxLabel htmlFor="shuttle">Ich habe Interesse am Shuttle nach </CheckboxLabel>
                 <AnmeldeInput type="text" id="wunschort" placeholder="Wunschort"/><br/>
-                <AnmeldeCheckbox type="checkbox" id="antwort" name="Ich kann leider nicht kommen"/>
-                <CheckboxLabel htmlFor="nein">Ich kann nicht kommen</CheckboxLabel><br/>
+
                 <AnmeldeBemerkung type="textfield"
-                                  placeholder="Hast du irgendeine Alergie oder sonstiges was wir für Dich beachten müssen?"
+                                  placeholder="Hinweise für das Orgateam (z.B. Allergien, Lebensmittelunverträglichkeiten, Veganer, etc.)?"
                                   id="bemerkung"/><br/>
-                <AnmeldeButton type="submit">Anmeldung</AnmeldeButton>
+                <AnmeldeCheckbox type="checkbox" id="nein" value="Nein, ich komme nicht zum Sommerfest" name="Ich kann leider nicht kommen"/>
+                <CheckboxLabel htmlFor="nein">Nein, ich kann nicht kommen</CheckboxLabel><br/>
+                <AnmeldeButton type="submit">Anmelden</AnmeldeButton>
             </Anmeldeform>
         </>
     )
