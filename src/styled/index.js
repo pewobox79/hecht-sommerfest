@@ -743,15 +743,25 @@ export const CovidDatum = styled.input`
 } @media${device.mobileL} {
   width: 90%
 }
+@media${device.mobileM} {
+  width: 37%
+}
 `
 
 export const CovidSelect = styled.select`
     @media${device.desktop}{
       height: 40px;
-      width: 200px;
-      margin: 10px 0px 5px 0px;
+      width: 175px;
+      margin: 10px 5px 5px 5px;
       font-family: SourceSansProBold;
       
+    }
+      @media${device.mobileM}{
+      width: 100%
+    }
+    @media${device.mobileL} {
+      width: 37%;
+      margin: 10px 5px 5px 5px;
     }
 `
 export const AnmeldeInputBegleitung = styled.input`
