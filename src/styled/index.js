@@ -723,6 +723,37 @@ export const AnmeldeInput = styled.input`
   width: 90%
 }
 `
+
+export const CovidDatum = styled.input`
+@media${device.desktop} {
+  height: 40px;
+  width: 150px;
+  margin: 10px 0px 5px 0px;
+  font-family: SourceSansProBold;
+
+
+  &::placeholder {
+    color: ${color.grey};
+    text-transform: uppercase;
+    padding: 5px 0px 5px 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    font-family: SourceSansProLight;
+  }
+} @media${device.mobileL} {
+  width: 90%
+}
+`
+
+export const CovidSelect = styled.select`
+    @media${device.desktop}{
+      height: 40px;
+      width: 200px;
+      margin: 10px 0px 5px 0px;
+      font-family: SourceSansProBold;
+      
+    }
+`
 export const AnmeldeInputBegleitung = styled.input`
 @media${device.desktop} {
   display: ${props => (props.visible ? "block" : "none")};

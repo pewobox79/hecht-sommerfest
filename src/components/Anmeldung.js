@@ -13,7 +13,7 @@ function Anmeldung() {
     return (
         <>
             <OuterLeft>
-            <Anmeldeformular/>
+            {/*<Anmeldeformular/>*/}
                 <AnmeldeFormularCovid/>
             </OuterLeft>
             <AnmeldungRight>
