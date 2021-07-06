@@ -88,7 +88,6 @@ function AnmeldeFormularCovid() {
             bemerkung: document.getElementById("bemerkung").value
 
         }
-        alert(Object.entries(JSON().stringify(anmeldung)))
 
         if (anmeldung)
             Email.send({
