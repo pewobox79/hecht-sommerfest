@@ -78,11 +78,11 @@ function Anmeldeformular() {
                 <AnmeldeCheckbox type="checkbox" id="ja1" name="allein" value={meldungAllein}
                                  onChange={e => setMeldungAllein(e = ("komme zum Sommerfest"))}/>
                 <CheckboxLabel htmlFor="allein">Ja, ich komme zum Sommerfest</CheckboxLabel><br/>
-                {/*<AnmeldeCheckbox type="checkbox" id="ja2" name="begleitperson"*/}
-                {/*                 value={meldungBegleitung}*/}
-                {/*                 onChange={e => setMeldungBegleitung(e = ("mit begleitung kommen"))}*/}
-                {/*                 onClick={e => setMitBegleitung(e.target.checked)}/>*/}
-                {/*<CheckboxLabel htmlFor="begleitperson">Ja, ich komme mit einer Begleitperson</CheckboxLabel><br/>*/}
+                <AnmeldeCheckbox id="genesen" type="checkbox" id="ja2" name="begleitperson"
+                                 value={meldungBegleitung}
+                                 onChange={e => setMeldungBegleitung(e = ("mit begleitung kommen"))}
+                                 onClick={e => setMitBegleitung(e.target.checked)}/>
+                <CheckboxLabel htmlFor="begleitperson">Ja, ich komme mit einer Begleitperson</CheckboxLabel><br/>
                 <AnmeldeCheckbox type="checkbox" id="shuttleservice" name="shuttle"
                                  value={shuttle} onChange={e => setShuttle(e = " Ich benötige einen Shuttle Service")}/>
                 <CheckboxLabel htmlFor="shuttle">Ich habe interesse am Shuttle Service</CheckboxLabel><br/>
