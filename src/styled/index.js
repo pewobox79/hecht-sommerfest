@@ -705,6 +705,7 @@ export const AnmeldeCheckbox = styled.input`
 `
 export const AnmeldeInput = styled.input`
 @media${device.desktop} {
+  display: none;
   height: 40px;
   width: 400px;
   margin: 10px 0px 5px 0px;
@@ -722,6 +723,70 @@ export const AnmeldeInput = styled.input`
 } @media${device.mobileL} {
   width: 90%
 }
+`
+
+export const AnmeldeName = styled.input`
+@media${device.desktop} {
+  height: 40px;
+  width: 400px;
+  margin: 10px 0px 5px 0px;
+  font-family: SourceSansProBold;
+
+
+  &::placeholder {
+    color: ${color.grey};
+    text-transform: uppercase;
+    padding: 5px 0px 5px 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    font-family: SourceSansProLight;
+  }
+} @media${device.mobileL} {
+  width: 90%
+}
+`
+
+export const CovidDatum = styled.input`
+@media${device.desktop} {
+  display:none;
+  height: 40px;
+  width: 160px;
+  margin: 10px 0px 5px 0px;
+  font-family: SourceSansProBold;
+
+
+  &::placeholder {
+    color: ${color.grey};
+    text-transform: uppercase;
+    padding: 5px 0px 5px 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    font-family: SourceSansProLight;
+  }
+} @media${device.mobileL} {
+  width: 90%
+}
+@media${device.mobileM} {
+  width: 42%
+}
+`
+
+export const CovidSelect = styled.select`
+    @media${device.desktop}{
+      display: none;
+      height: 44px;
+      width: 150px;
+      margin: 10px 5px 5px 5px;
+      font-family: SourceSansProBold;
+      
+    }
+      @media${device.mobileM}{
+      width: 100%
+    }
+    @media${device.mobileL} {
+      width: 42%;
+      margin: 10px 5px 5px 5px;
+    }
 `
 export const AnmeldeInputBegleitung = styled.input`
 @media${device.desktop} {

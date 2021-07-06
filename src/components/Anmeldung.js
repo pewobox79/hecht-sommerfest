@@ -6,13 +6,15 @@ import {
 } from "../styled";
 import Anmeldeformular from "./Anmeldeformular";
 import Anmeldeplatzhalter from "./Anmeldeplatzhalter";
+import AnmeldeFormularCovid from "./AnmeldeFormularCovid";
 
 
 function Anmeldung() {
     return (
         <>
             <OuterLeft>
-            <Anmeldeformular/>
+            {/*<Anmeldeformular/>*/}
+                <AnmeldeFormularCovid/>
             </OuterLeft>
             <AnmeldungRight>
                 <Uebernachtung/>
