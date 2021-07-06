@@ -12,13 +12,12 @@ import {
 
 function Anmeldeformular() {
 
-    const [meldungAllein, setMeldungAllein] = useState("werde mit")
-    const [covidStatus, setCovidStatus] = useState(false)
-    const [meldungCovid, setMeldungCovid] = useState(false)
-    const [absage, setAbsage] = useState("kann kommen")
+    const [meldungAllein, setMeldungAllein] = useState()
+    const [meldungBegleitung, setMeldungBegleitung] = useState()
+    const [absage, setAbsage] = useState()
     const [teilnehmerName, setTeilnehmerName] = useState()
-    const [covidInfoTag, setCovidInfoTag] = useState("")
-    const [shuttle, setShuttle] = useState(" Ich benötige keinen Shuttleservice")
+    const [begleitungName, setBegleitungName] = useState()
+    const [shuttle, setShuttle] = useState()
     const [bemerkung, setBemerkung] = useState()
 
     const [mitBegleitung, setMitBegleitung] = useState(false)
@@ -78,31 +77,13 @@ function Anmeldeformular() {
                 <AnmeldeLabel>Anmeldung</AnmeldeLabel>
 
                 <AnmeldeCheckbox type="checkbox" id="ja1" name="allein" value={meldungAllein}
-                                 onChange={e => setMeldungAllein(e = ("komme zum Sommerfest"))}
-                                 />
-                <CheckboxLabel htmlFor="allein">Ja, ich komme zum Sommerfest</CheckboxLabel><br/>
-
-                <div id="covidDetails" hidden>
-                    <AnmeldeCheckbox id="geimpft" type="checkbox" name="genesen"
-                                     value={meldungCovid}
-                                     onChange={e => setMeldungCovid(e = ("genesen"))}
-                                     onClick={e => setMitBegleitung(e.target.checked)}/>
-                    <CheckboxLabel htmlFor="genesen">Ich bin genesen</CheckboxLabel><br/>
-
-
-                    <AnmeldeCheckbox id="genesen" type="checkbox" name="genesen"
-                                     value={meldungCovid}
-                                     onChange={e => setMeldungCovid(e = ("genesen"))}
-                                     onClick={e => setMitBegleitung(e.target.checked)}/>
-                    <CheckboxLabel htmlFor="genesen">Ich bin genesen</CheckboxLabel><br/>
-
-                    <AnmeldeInputBegleitung visible={mitBegleitung} id="begleitpersonfeld" type="text"
-                                            value={covidInfoTag} onChange={e => (setCovidInfoTag(e.target.value))}
-                                            placeholder="An welchem Datum geimpft bzw. genesen?"/>
-
-                </div>
-
-
+                                 onChange={e => setMeldungAllein(e = ("ich komme allein"))}/>
+                <CheckboxLabel for="allein">Ja, ich komme allein zum Event</CheckboxLabel><br/>
+                <AnmeldeCheckbox type="checkbox" id="ja2" name="begleitperson"
+                                 value={meldungBegleitung}
+                                 onChange={e => setMeldungBegleitung(e = ("ich komme mit begleitung"))}
+                                 onClick={e => setMitBegleitung(e.target.checked)}/>
+                <CheckboxLabel for="begleitperson">Ja, ich komme mit einer Begleitperson</CheckboxLabel><br/>
                 <AnmeldeCheckbox type="checkbox" id="shuttleservice" name="shuttle"
                                  value={shuttle} onChange={e => setShuttle(e = " Ich benötige einen Shuttle Service")}/>
                 <CheckboxLabel htmlFor="shuttle">Ich habe interesse am Shuttle Service</CheckboxLabel><br/>
@@ -114,6 +95,9 @@ function Anmeldeformular() {
                               placeholder="Vor- und Zuname" required/>
                 {/*<Plusicon src={PlusIcon}/>*/}
 
+                <AnmeldeInputBegleitung visible={mitBegleitung} id="begleitpersonfeld" type="text"
+                                        value={begleitungName} onChange={e => (setBegleitungName(e.target.value))}
+                                        placeholder="Vor-und Zuname der zusätzlichen Begleitperson"/>
                 <AnmeldeBemerkung type="text" value={bemerkung} onChange={e => (setBemerkung(e.target.value))}
                                   placeholder="Bemerkung"/>
 
