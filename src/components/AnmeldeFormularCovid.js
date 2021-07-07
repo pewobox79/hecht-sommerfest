@@ -20,13 +20,22 @@ function AnmeldeFormularCovid() {
             document.getElementById('covid').style.display = 'block';
             document.getElementById('covid').style.float = 'left';
             document.getElementById('covidDatum').style.display = 'block';
+            document.getElementById('ja').value = "ja, ich komme zum Sommerfest"
         } else {
             document.getElementById('covid').style.display = 'none';
             document.getElementById('covidDatum').style.display = 'none';
+            document.getElementById('ja').value = "empty"
         }
 
     }
 
+    function absage(){
+        if(document.getElementById('nein').checked){
+            document.getElementById('nein').value = "nein ich komme nicht"}
+        else{
+            document.getElementById('nein').value = 'empty'
+        }
+    }
     function shuttleFeedback() {
         if (document.getElementById('shuttle').checked) {
             document.getElementById('wunschort').style.display = 'block';
@@ -129,7 +138,7 @@ function AnmeldeFormularCovid() {
                 <AnmeldeBemerkung type="textfield"
                                   placeholder="Hinweise für das Orgateam (z.B. Allergien, Lebensmittelunverträglichkeiten, Veganer, etc.)?"
                                   id="bemerkung"/><br/>
-                <AnmeldeCheckbox type="checkbox" id="nein" value="Nein, ich komme nicht zum Sommerfest" name="Ich kann leider nicht kommen"/>
+                <AnmeldeCheckbox onChange={absage} type="checkbox" id="nein" name="Ich kann leider nicht kommen"/>
                 <CheckboxLabel htmlFor="nein">Nein, ich kann nicht kommen</CheckboxLabel><br/>
                 <AnmeldeButton type="submit">Anmelden</AnmeldeButton>
             </Anmeldeform>
