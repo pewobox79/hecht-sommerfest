@@ -127,7 +127,7 @@ function AnmeldeFormularCovid() {
                         <option>Ich </option>
                         <option value="genesen">bin genesen</option>
                         <option value="geimpft">bin geimpft (2.Impfung)</option>
-                        <option value="geimpft">gehe zum testen</option>
+                        <option value="getestet">gehe zum testen</option>
                     </CovidSelect>
                     <CovidDatum type="text" id="covidDatum" placeholder="Datum"/>
                 <br/>
