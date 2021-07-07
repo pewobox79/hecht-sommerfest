@@ -20,13 +20,22 @@ function AnmeldeFormularCovid() {
             document.getElementById('covid').style.display = 'block';
             document.getElementById('covid').style.float = 'left';
             document.getElementById('covidDatum').style.display = 'block';
+            document.getElementById('ja').value = "ja, ich komme zum Sommerfest"
         } else {
             document.getElementById('covid').style.display = 'none';
             document.getElementById('covidDatum').style.display = 'none';
+            document.getElementById('ja').value = "empty"
         }
 
     }
 
+    function absage(){
+        if(document.getElementById('nein').checked){
+            document.getElementById('nein').value = "nein ich komme nicht"}
+        else{
+            document.getElementById('nein').value = 'empty'
+        }
+    }
     function shuttleFeedback() {
         if (document.getElementById('shuttle').checked) {
             document.getElementById('wunschort').style.display = 'block';
@@ -88,18 +97,18 @@ function AnmeldeFormularCovid() {
             bemerkung: document.getElementById("bemerkung").value
 
         }
-
-        if (anmeldung)
-            Email.send({
-                SecureToken: "bc61b703-5e46-49b7-ad19-be1847cf6673",
-                To: 'y.wolf@hecht.eu',
-                CC: 'julien.lobo.13@gmail.com',
-                From: "pewobox79@gmail.com",
-                Subject: `Sommerfest Rückmeldung`,
-                Body: `Neu Anmeldung von <strong>${anmeldung.name}</strong>. Teilnahme Rückmeldung: ${anmeldung.antwort.ja} ${anmeldung.antwort.nein}, CovidStatus: ${anmeldung.covid.status} Datum: ${anmeldung.covid.covidDatum}, Shuttle: ${anmeldung.shuttle.wahl}  Wusnchort: ${anmeldung.shuttle.wunschort}`
-            }).then(
-                message => alert("Ihre Rückmeldung zum Sommerfest wurde an Yessica Wolf verschickt.")
-            );
+        console.log(anmeldung)
+        // if (anmeldung)
+        //     Email.send({
+        //         SecureToken: "bc61b703-5e46-49b7-ad19-be1847cf6673",
+        //         To: 'y.wolf@hecht.eu',
+        //         CC: 'julien.lobo.13@gmail.com',
+        //         From: "pewobox79@gmail.com",
+        //         Subject: `Sommerfest Rückmeldung`,
+        //         Body: `Neu Anmeldung von <strong>${anmeldung.name}</strong>. Teilnahme Rückmeldung: ${anmeldung.antwort.ja} ${anmeldung.antwort.nein}, CovidStatus: ${anmeldung.covid.status} Datum: ${anmeldung.covid.covidDatum}, Shuttle: ${anmeldung.shuttle.wahl}  Wusnchort: ${anmeldung.shuttle.wunschort}`
+        //     }).then(
+        //         message => alert("Ihre Rückmeldung zum Sommerfest wurde an Yessica Wolf verschickt.")
+        //     );
 
     }
 
@@ -110,8 +119,7 @@ function AnmeldeFormularCovid() {
             <Anmeldeform onSubmit={sendMail} method="post" enctype="text/plain">
                 <AnmeldeLabel>Anmeldung</AnmeldeLabel>
                 <AnmeldeName id="name" name="name" type="text" placeholder="Vorname, Name" required/><br/>
-                <AnmeldeCheckbox onChange={zusage} type="checkbox" id="ja" name="ja"
-                                 value="Ja, ich komme zum Sommerfest"/>
+                <AnmeldeCheckbox onChange={zusage} type="checkbox" id="ja" name="ja"/>
                 <CheckboxLabel htmlFor="ja">Ja, ich komme zum Sommerfest</CheckboxLabel><br/>
                     <CovidSelect id="covid" name="covid">
                         <option>Ich </option>
@@ -129,7 +137,7 @@ function AnmeldeFormularCovid() {
                 <AnmeldeBemerkung type="textfield"
                                   placeholder="Hinweise für das Orgateam (z.B. Allergien, Lebensmittelunverträglichkeiten, Veganer, etc.)?"
                                   id="bemerkung"/><br/>
-                <AnmeldeCheckbox type="checkbox" id="nein" value="Nein, ich komme nicht zum Sommerfest" name="Ich kann leider nicht kommen"/>
+                <AnmeldeCheckbox onChange={absage} type="checkbox" id="nein" name="Ich kann leider nicht kommen"/>
                 <CheckboxLabel htmlFor="nein">Nein, ich kann nicht kommen</CheckboxLabel><br/>
                 <AnmeldeButton type="submit">Anmelden</AnmeldeButton>
             </Anmeldeform>
