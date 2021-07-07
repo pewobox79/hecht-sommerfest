@@ -114,7 +114,7 @@ function AnmeldeFormularCovid() {
                                  value="Ja, ich komme zum Sommerfest"/>
                 <CheckboxLabel htmlFor="ja">Ja, ich komme zum Sommerfest</CheckboxLabel><br/>
                     <CovidSelect id="covid" name="covid">
-                        <option>Ich bin</option>
+                        <option>Ich </option>
                         <option value="genesen">bin genesen</option>
                         <option value="geimpft">bin geimpft (2.Impfung)</option>
                         <option value="geimpft">gehe zum testen</option>
