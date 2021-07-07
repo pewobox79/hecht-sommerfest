@@ -39,8 +39,10 @@ function AnmeldeFormularCovid() {
     function shuttleFeedback() {
         if (document.getElementById('shuttle').checked) {
             document.getElementById('wunschort').style.display = 'block';
+            document.getElementById('shuttle').value = "Ich habe interesse am Shuttle"
         } else {
             document.getElementById('wunschort').style.display = 'none';
+            document.getElementById('shuttle').value = "interesse"
         }
 
     }
@@ -129,8 +131,7 @@ function AnmeldeFormularCovid() {
                     </CovidSelect>
                     <CovidDatum type="text" id="covidDatum" placeholder="Datum"/>
                 <br/>
-                <AnmeldeCheckbox onChange={shuttleFeedback} type="checkbox" id="shuttle" name="shuttle"
-                                 value="Ich habe interesse am Shuttle Service"/>
+                <AnmeldeCheckbox onChange={shuttleFeedback} type="checkbox" id="shuttle" name="shuttle"/>
                 <CheckboxLabel htmlFor="shuttle">Ich habe Interesse am Shuttle nach </CheckboxLabel>
                 <AnmeldeInput type="text" id="wunschort" placeholder="Wunschort"/><br/>
 
