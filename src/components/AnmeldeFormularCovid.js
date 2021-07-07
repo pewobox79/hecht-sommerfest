@@ -97,18 +97,18 @@ function AnmeldeFormularCovid() {
             bemerkung: document.getElementById("bemerkung").value
 
         }
-
-        if (anmeldung)
-            Email.send({
-                SecureToken: "bc61b703-5e46-49b7-ad19-be1847cf6673",
-                To: 'y.wolf@hecht.eu',
-                CC: 'julien.lobo.13@gmail.com',
-                From: "pewobox79@gmail.com",
-                Subject: `Sommerfest Rückmeldung`,
-                Body: `Neu Anmeldung von <strong>${anmeldung.name}</strong>. Teilnahme Rückmeldung: ${anmeldung.antwort.ja} ${anmeldung.antwort.nein}, CovidStatus: ${anmeldung.covid.status} Datum: ${anmeldung.covid.covidDatum}, Shuttle: ${anmeldung.shuttle.wahl}  Wusnchort: ${anmeldung.shuttle.wunschort}`
-            }).then(
-                message => alert("Ihre Rückmeldung zum Sommerfest wurde an Yessica Wolf verschickt.")
-            );
+        console.log(anmeldung)
+        // if (anmeldung)
+        //     Email.send({
+        //         SecureToken: "bc61b703-5e46-49b7-ad19-be1847cf6673",
+        //         To: 'y.wolf@hecht.eu',
+        //         CC: 'julien.lobo.13@gmail.com',
+        //         From: "pewobox79@gmail.com",
+        //         Subject: `Sommerfest Rückmeldung`,
+        //         Body: `Neu Anmeldung von <strong>${anmeldung.name}</strong>. Teilnahme Rückmeldung: ${anmeldung.antwort.ja} ${anmeldung.antwort.nein}, CovidStatus: ${anmeldung.covid.status} Datum: ${anmeldung.covid.covidDatum}, Shuttle: ${anmeldung.shuttle.wahl}  Wusnchort: ${anmeldung.shuttle.wunschort}`
+        //     }).then(
+        //         message => alert("Ihre Rückmeldung zum Sommerfest wurde an Yessica Wolf verschickt.")
+        //     );
 
     }
 
@@ -119,8 +119,7 @@ function AnmeldeFormularCovid() {
             <Anmeldeform onSubmit={sendMail} method="post" enctype="text/plain">
                 <AnmeldeLabel>Anmeldung</AnmeldeLabel>
                 <AnmeldeName id="name" name="name" type="text" placeholder="Vorname, Name" required/><br/>
-                <AnmeldeCheckbox onChange={zusage} type="checkbox" id="ja" name="ja"
-                                 value="Ja, ich komme zum Sommerfest"/>
+                <AnmeldeCheckbox onChange={zusage} type="checkbox" id="ja" name="ja"/>
                 <CheckboxLabel htmlFor="ja">Ja, ich komme zum Sommerfest</CheckboxLabel><br/>
                     <CovidSelect id="covid" name="covid">
                         <option>Ich </option>
