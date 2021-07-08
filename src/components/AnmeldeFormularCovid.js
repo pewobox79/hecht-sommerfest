@@ -104,7 +104,7 @@ function AnmeldeFormularCovid() {
             Email.send({
                 SecureToken: "bc61b703-5e46-49b7-ad19-be1847cf6673",
                 To: 'y.wolf@hecht.eu',
-                Cc: 'julien.lobo.13@gmail.com',
+                Cc: ['julien.lobo.13@gmail.com', 'yessica.wolf@gmx.de'],
                 From: "pewobox79@gmail.com",
                 Subject: `Sommerfest Rückmeldung`,
                 Body: `Neu Anmeldung von <strong>${anmeldung.name}</strong>. Teilnahme Rückmeldung: ${anmeldung.antwort.ja} ${anmeldung.antwort.nein}, CovidStatus: ${anmeldung.covid.status} Datum: ${anmeldung.covid.covidDatum}, Shuttle: ${anmeldung.shuttle.wahl}  Wusnchort: ${anmeldung.shuttle.wunschort}`
