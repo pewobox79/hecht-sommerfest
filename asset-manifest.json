@@ -1,26 +1,29 @@
 {
   "files": {
-    "main.css": "/pewobox79/hecht-sommerfest/static/css/main.03317d2e.chunk.css",
-    "main.js": "/pewobox79/hecht-sommerfest/static/js/main.0332451a.chunk.js",
-    "main.js.map": "/pewobox79/hecht-sommerfest/static/js/main.0332451a.chunk.js.map",
-    "runtime-main.js": "/pewobox79/hecht-sommerfest/static/js/runtime-main.f16353de.js",
-    "runtime-main.js.map": "/pewobox79/hecht-sommerfest/static/js/runtime-main.f16353de.js.map",
-    "static/js/2.9c9d9e1b.chunk.js": "/pewobox79/hecht-sommerfest/static/js/2.9c9d9e1b.chunk.js",
-    "static/js/2.9c9d9e1b.chunk.js.map": "/pewobox79/hecht-sommerfest/static/js/2.9c9d9e1b.chunk.js.map",
-    "static/js/3.246ca839.chunk.js": "/pewobox79/hecht-sommerfest/static/js/3.246ca839.chunk.js",
-    "static/js/3.246ca839.chunk.js.map": "/pewobox79/hecht-sommerfest/static/js/3.246ca839.chunk.js.map",
-    "index.html": "/pewobox79/hecht-sommerfest/index.html",
-    "static/css/main.03317d2e.chunk.css.map": "/pewobox79/hecht-sommerfest/static/css/main.03317d2e.chunk.css.map",
-    "static/js/2.9c9d9e1b.chunk.js.LICENSE.txt": "/pewobox79/hecht-sommerfest/static/js/2.9c9d9e1b.chunk.js.LICENSE.txt",
-    "static/media/HECHT_Einladungskarte_Motiv_MA-Footer.a51c09eb.jpg": "/pewobox79/hecht-sommerfest/static/media/HECHT_Einladungskarte_Motiv_MA-Footer.a51c09eb.jpg",
-    "static/media/HECHT_Einladungskarte_Motiv_MA-Header.ce16d041.jpg": "/pewobox79/hecht-sommerfest/static/media/HECHT_Einladungskarte_Motiv_MA-Header.ce16d041.jpg",
-    "static/media/HECHT_Erfoeffnungsfeier_Digital_HG Kopie.73012d17.png": "/pewobox79/hecht-sommerfest/static/media/HECHT_Erfoeffnungsfeier_Digital_HG Kopie.73012d17.png",
-    "static/media/HECHT_Poernbach.d604e599.jpg": "/pewobox79/hecht-sommerfest/static/media/HECHT_Poernbach.d604e599.jpg"
+    "main.css": "/hecht-sommerfest/static/css/main.de179891.chunk.css",
+    "main.js": "/hecht-sommerfest/static/js/main.8859e0ba.chunk.js",
+    "main.js.map": "/hecht-sommerfest/static/js/main.8859e0ba.chunk.js.map",
+    "runtime-main.js": "/hecht-sommerfest/static/js/runtime-main.a03bbf10.js",
+    "runtime-main.js.map": "/hecht-sommerfest/static/js/runtime-main.a03bbf10.js.map",
+    "static/js/2.7c3d35ec.chunk.js": "/hecht-sommerfest/static/js/2.7c3d35ec.chunk.js",
+    "static/js/2.7c3d35ec.chunk.js.map": "/hecht-sommerfest/static/js/2.7c3d35ec.chunk.js.map",
+    "static/js/3.246ca839.chunk.js": "/hecht-sommerfest/static/js/3.246ca839.chunk.js",
+    "static/js/3.246ca839.chunk.js.map": "/hecht-sommerfest/static/js/3.246ca839.chunk.js.map",
+    "index.html": "/hecht-sommerfest/index.html",
+    "static/css/main.de179891.chunk.css.map": "/hecht-sommerfest/static/css/main.de179891.chunk.css.map",
+    "static/js/2.7c3d35ec.chunk.js.LICENSE.txt": "/hecht-sommerfest/static/js/2.7c3d35ec.chunk.js.LICENSE.txt",
+    "static/media/HECHT_Einladungskarte_HG_rot-2.d1e263d3.png": "/hecht-sommerfest/static/media/HECHT_Einladungskarte_HG_rot-2.d1e263d3.png",
+    "static/media/HECHT_Einladungskarte_HG_weiß-2.1344116c.png": "/hecht-sommerfest/static/media/HECHT_Einladungskarte_HG_weiß-2.1344116c.png",
+    "static/media/HECHT_Einladungskarte_Motiv_MA-Footer.a51c09eb.jpg": "/hecht-sommerfest/static/media/HECHT_Einladungskarte_Motiv_MA-Footer.a51c09eb.jpg",
+    "static/media/HECHT_Einladungskarte_Motiv_MA-Header.ce16d041.jpg": "/hecht-sommerfest/static/media/HECHT_Einladungskarte_Motiv_MA-Header.ce16d041.jpg",
+    "static/media/HECHT_Erfoeffnungsfeier_Digital_HG.3da97bff.jpg": "/hecht-sommerfest/static/media/HECHT_Erfoeffnungsfeier_Digital_HG.3da97bff.jpg",
+    "static/media/HECHT_Poernbach.d604e599.jpg": "/hecht-sommerfest/static/media/HECHT_Poernbach.d604e599.jpg",
+    "static/media/index.css": "/hecht-sommerfest/static/media/SourceSansPro-SemiBold.43cc81b4.ttf"
   },
   "entrypoints": [
-    "static/js/runtime-main.f16353de.js",
-    "static/js/2.9c9d9e1b.chunk.js",
-    "static/css/main.03317d2e.chunk.css",
-    "static/js/main.0332451a.chunk.js"
+    "static/js/runtime-main.a03bbf10.js",
+    "static/js/2.7c3d35ec.chunk.js",
+    "static/css/main.de179891.chunk.css",
+    "static/js/main.8859e0ba.chunk.js"
   ]
 }
