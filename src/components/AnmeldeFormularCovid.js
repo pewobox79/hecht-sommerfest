@@ -20,7 +20,8 @@ function AnmeldeFormularCovid() {
             document.getElementById('covid').style.display = 'block';
             document.getElementById('covid').style.float = 'left';
             document.getElementById('covidDatum').style.display = 'block';
-            document.getElementById('ja').value = "ja, ich komme zum Sommerfest"
+            document.getElementById('ja').value = "ja, ich komme zum Sommerfest";
+            document.getElementById('covid').required = true
         } else {
             document.getElementById('covid').style.display = 'none';
             document.getElementById('covidDatum').style.display = 'none';
@@ -29,20 +30,21 @@ function AnmeldeFormularCovid() {
 
     }
 
-    function absage(){
-        if(document.getElementById('nein').checked){
-            document.getElementById('nein').value = "nein ich komme nicht"}
-        else{
+    function absage() {
+        if (document.getElementById('nein').checked) {
+            document.getElementById('nein').value = "Nein, ich komme nicht zum Sommerfest"
+        } else {
             document.getElementById('nein').value = 'empty'
         }
     }
+
     function shuttleFeedback() {
         if (document.getElementById('shuttle').checked) {
             document.getElementById('wunschort').style.display = 'block';
-            document.getElementById('shuttle').value = "Ich habe interesse am Shuttle"
+            document.getElementById('shuttle').value = "Ich habe Interesse am Shuttle Sevice"
         } else {
             document.getElementById('wunschort').style.display = 'none';
-            document.getElementById('shuttle').value = "kein interesse"
+            document.getElementById('shuttle').value = "Kein interesse am Shuttle"
         }
 
     }
@@ -93,7 +95,7 @@ function AnmeldeFormularCovid() {
                 covidDatum: document.getElementById("covidDatum").value
             },
             shuttle: {
-                wahl: document.getElementById("shuttle").value = "kein interesse",
+                wahl: document.getElementById("shuttle").value,
                 wunschort: document.getElementById("wunschort").value
             },
             bemerkung: document.getElementById("bemerkung").value
@@ -109,9 +111,8 @@ function AnmeldeFormularCovid() {
                 Subject: `Sommerfest Rückmeldung`,
                 Body: `Neu Anmeldung von <strong>${anmeldung.name}</strong>. Teilnahme Rückmeldung: ${anmeldung.antwort.ja} ${anmeldung.antwort.nein}, CovidStatus: ${anmeldung.covid.status} Datum: ${anmeldung.covid.covidDatum}, Shuttle: ${anmeldung.shuttle.wahl}  Wusnchort: ${anmeldung.shuttle.wunschort}`
             }).then(
-                message => alert("Ihre Rückmeldung zum Sommerfest wurde an Yessica Wolf verschickt.")
-            );
-
+                message => alert("Deine Rückmeldung zum Sommerfest wurde an Yessica Wolf verschickt.")
+            ).catch(error => alert(error.message));
     }
 
     return (
@@ -123,13 +124,13 @@ function AnmeldeFormularCovid() {
                 <AnmeldeName id="name" name="name" type="text" placeholder="Vorname, Name" required/><br/>
                 <AnmeldeCheckbox onChange={zusage} type="checkbox" id="ja" name="ja"/>
                 <CheckboxLabel htmlFor="ja">Ja, ich komme zum Sommerfest</CheckboxLabel><br/>
-                    <CovidSelect id="covid" name="covid">
-                        <option>Ich </option>
-                        <option value="genesen">bin genesen</option>
-                        <option value="geimpft">bin geimpft (2.Impfung)</option>
-                        <option value="getestet">gehe zum testen</option>
-                    </CovidSelect>
-                    <CovidDatum type="text" id="covidDatum" placeholder="Datum"/>
+                <CovidSelect id="covid" name="covid">
+                    <option>Bitte wählen...</option>
+                    <option value="genesen">Ich bin genesen</option>
+                    <option value="geimpft">Ich bin geimpft (2.Impfung)</option>
+                    <option value="testen">Ich gehe zum testen</option>
+                </CovidSelect>
+                <CovidDatum type="text" id="covidDatum" placeholder="Datum"/>
                 <br/>
                 <AnmeldeCheckbox onChange={shuttleFeedback} type="checkbox" id="shuttle" name="shuttle"/>
                 <CheckboxLabel htmlFor="shuttle">Ich habe Interesse am Shuttle nach </CheckboxLabel>
